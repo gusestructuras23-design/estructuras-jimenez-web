@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://estructurasjimenez.com/sitemap.xml

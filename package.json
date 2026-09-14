@@ -1,0 +1,16 @@
+{
+  "name": "estructuras-jimenez-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "astro": "latest",
+    "wrangler": "latest"
+  }
+}
