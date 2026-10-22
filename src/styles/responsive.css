@@ -11,9 +11,33 @@
   .hero-layout { padding-top: 34px; gap: 24px; }
   .hero-copy { padding-bottom: 0; }
   .hero-sequence { right: auto; left: 0; top: 52px; transform: translateY(-100%); }
-  .hero-art { min-height: 520px; }
-  .hero-brand-stamp { right: 12%; width: 350px; }
-  
+
+  .hero-art { min-height: 500px; }
+  .hero-brand-stamp { width: min(430px, 76vw); }
+
+  .blueprint-layout { gap: 50px; }
+  .blueprint-visual { min-height: 560px; }
+
+  .statement-grid { grid-template-columns: 1fr; gap: 28px; }
+  .statement-number { font-size: 116px; }
+
+  .about-layout { gap: 50px; }
+  .quote-layout { gap: 48px; }
+
+  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
+  .footer-signature { display: none; }
+}
+
+@media (max-width: 760px) {
+  .container { width: min(calc(100% - 28px), var(--max)); }
+  .section { padding: 84px 0; }
+
+  .header-inner { min-height: 80px; }
+  .brand {
+    width: 96px;
+    min-width: 96px;
+    height: 70px;
+  }
   .brand img {
     width: 92px;
     max-height: 70px;
@@ -58,6 +82,7 @@
   .hero-copy > p { font-size: 15px; }
   .hero-actions { flex-direction: column; }
   .button { width: 100%; }
+
   .hero-trust {
     grid-template-columns: 1fr;
     margin-top: 38px;
@@ -67,28 +92,23 @@
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-art {
-    min-height: 390px;
+  .hero-art { min-height: 390px; }
+  .hero-art::before {
+    width: 350px;
+    height: 350px;
   }
   .hero-brand-stamp {
     width: min(340px, 92%);
-    top: auto;
-    right: auto;
     padding: 0;
-    border-radius: 0;
-  }
-  .barn-wireframe {
-    width: 118%;
-    right: -31%;
-    bottom: 34px;
   }
   .hero-art-note {
     left: 50%;
-    bottom: 12px;
-    width: auto;
+    bottom: 10px;
     min-width: 230px;
-    padding: 11px 14px;
+    padding: 10px 14px;
   }
+  .hero-art-note strong { font-size: 13px; }
+
   .hero-marquee {
     min-height: 68px;
     overflow: hidden;
