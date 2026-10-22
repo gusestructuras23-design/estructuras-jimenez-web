@@ -2,63 +2,32 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
-const title = 'Estructuras Jiménez | Implementos porcícolas';
+const title = 'Estructuras Jiménez | Equipamiento para el sector porcícola';
 const description =
-  'Estructuras Jiménez. Fabricación de implementos y equipamiento para el sector porcícola en Tepatitlán de Morelos, Jalisco, México.';
+  'Estructuras Jiménez. Fabricación de implementos y equipamiento para el sector porcícola en Tepatitlán de Morelos, Jalisco.';
 
 const products = [
-  {
-    number: '01',
-    title: 'Casetas de engorda',
-    description: 'Fabricación de casetas destinadas a operaciones de engorda porcícola.'
-  },
-  {
-    number: '02',
-    title: 'Bodegas',
-    description: 'Fabricación de estructuras para bodegas.'
-  },
-  {
-    number: '03',
-    title: 'Camas de maternidad',
-    description: 'Fabricación de camas de maternidad en diferentes modelos.'
-  },
-  {
-    number: '04',
-    title: 'Camas de destete',
-    description: 'Fabricación de camas para la etapa de destete.'
-  },
-  {
-    number: '05',
-    title: 'Jaulas de gestación',
-    description: 'Fabricación de jaulas para gestación porcícola.'
-  },
-  {
-    number: '06',
-    title: 'Jaulas porcícolas',
-    description: 'Fabricación de jaulas destinadas al sector porcícola.'
-  },
-  {
-    number: '07',
-    title: 'Comederos',
-    description: 'Comederos para las etapas de engorda y destete.'
-  },
-  {
-    number: '08',
-    title: 'Tolvas para granos',
-    description: 'Tolvas para almacenamiento de granos.'
-  }
+  { number: '01', title: 'Casetas de engorda', eyebrow: 'Infraestructura', description: 'Fabricación de casetas destinadas a operaciones de engorda porcícola.', icon: 'caseta' },
+  { number: '02', title: 'Bodegas', eyebrow: 'Estructuras', description: 'Fabricación de estructuras para bodegas.', icon: 'bodega' },
+  { number: '03', title: 'Camas de maternidad', eyebrow: 'Maternidad', description: 'Fabricación de camas de maternidad en diferentes modelos.', icon: 'maternidad' },
+  { number: '04', title: 'Camas de destete', eyebrow: 'Destete', description: 'Fabricación de camas para la etapa de destete.', icon: 'destete' },
+  { number: '05', title: 'Jaulas de gestación', eyebrow: 'Gestación', description: 'Fabricación de jaulas para gestación porcícola.', icon: 'gestacion' },
+  { number: '06', title: 'Jaulas porcícolas', eyebrow: 'Equipamiento', description: 'Fabricación de jaulas destinadas al sector porcícola.', icon: 'jaula' },
+  { number: '07', title: 'Comederos', eyebrow: 'Alimentación', description: 'Comederos para las etapas de engorda y destete.', icon: 'comedero' },
+  { number: '08', title: 'Tolvas para granos', eyebrow: 'Almacenamiento', description: 'Tolvas para almacenamiento de granos.', icon: 'tolva' }
 ];
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'LocalBusiness',
   name: 'Estructuras Jiménez',
   url: 'https://estructurasjimenez.com',
   telephone: '+52 378 121 4083',
-  description:
-    'Fabricación de implementos y equipamiento para el sector porcícola.',
+  email: 'gusestructuras23@gmail.com',
+  description,
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Periférico Salvador Zúñiga 1871',
     addressLocality: 'Tepatitlán de Morelos',
     addressRegion: 'Jalisco',
     addressCountry: 'MX'
@@ -69,241 +38,421 @@ const year = new Date().getFullYear();
 ---
 
 <BaseLayout title={title} description={description}>
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(structuredData)}
-  ></script>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
 
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="Estructuras Jiménez, inicio">
-        <span class="brand-mark">EJ</span>
-        <span class="brand-name">
+        <span class="brand-symbol" aria-hidden="true">EJ</span>
+        <span class="brand-wordmark">
           <strong>Estructuras</strong>
           <span>Jiménez</span>
         </span>
       </a>
 
-      <button
-        class="menu-toggle"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="main-nav"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
       </button>
 
       <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
         <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Productos</a>
         <a href="#contacto">Contacto</a>
-        <a href="#privacidad">Privacidad</a>
+        <a class="nav-quote" href="#cotizar">Cotizar</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-blueprint" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
 
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <span class="eyebrow">Tepatitlán de Morelos · Jalisco · México</span>
-
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Tepatitlán de Morelos · Jalisco</span>
+          <div class="hero-sequence" aria-hidden="true">01 / ESTRUCTURAS JIMÉNEZ</div>
           <h1>
-            Fabricación de
-            <span>implementos porcícolas</span>
+            Equipamiento
+            <span>para el sector porcícola.</span>
           </h1>
-
           <p>
-            Estructuras Jiménez fabrica equipamiento y estructuras para el
-            sector porcícola.
+            Fabricación de implementos y equipamiento porcícola desde Tepatitlán de Morelos, Jalisco.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="tel:+523781214083">
-              Llamar a oficina
-            </a>
+            <a class="button button-primary" href="#cotizar">Solicitar cotización <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost" href="#productos">Ver productos</a>
+          </div>
 
-            <a class="button button-secondary" href="#servicios">
-              Ver productos
-            </a>
+          <div class="hero-trust" aria-label="Información principal">
+            <div><strong>Sector</strong><span>Porcícola</span></div>
+            <div><strong>Ubicación</strong><span>Tepatitlán de Morelos</span></div>
+            <div><strong>Contacto</strong><span>378 121 4083</span></div>
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="structure structure-a"></div>
-          <div class="structure structure-b"></div>
-          <div class="structure structure-c"></div>
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="hero-brand-stamp">
+            <span>Marca</span>
+            <img src="/brand/estructuras-jimenez.svg" alt="" width="420" height="323" />
+          </div>
 
-          <div class="hero-card">
-            <span>Sector</span>
-            <strong>Porcícola</strong>
-            <small>Estructuras Jiménez</small>
+          <svg class="barn-wireframe" viewBox="0 0 620 420">
+            <g fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M72 315V136l235-92 242 98v173" />
+              <path d="M72 136 307 44l242 98M307 44v271M72 315h477M72 136l235 74 242-68" />
+              <path d="M122 155v160M172 174v141M222 190v125M272 206v109M357 190v125M407 172v143M457 154v161M507 140v175" opacity=".62" />
+              <path d="M72 257h477M72 284h477" opacity=".45" />
+            </g>
+          </svg>
+
+          <div class="hero-art-note">
+            <span>Sector porcícola</span>
+            <strong>Tepatitlán de Morelos · Jalisco</strong>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="nosotros" class="section about">
-      <div class="container two-column">
-        <div>
-          <span class="section-label">Nosotros</span>
-          <h2>Soluciones para el sector porcícola</h2>
-        </div>
-
-        <div class="about-copy">
-          <p>
-            Estructuras Jiménez es una empresa ubicada en Tepatitlán de Morelos,
-            Jalisco, dedicada a la fabricación de implementos y equipamiento
-            para el sector porcícola.
-          </p>
-
-          <p>
-            Fabricamos distintos tipos de estructuras, jaulas, camas,
-            comederos y sistemas de almacenamiento para granos.
-          </p>
-        </div>
+      <div class="container hero-marquee" aria-hidden="true">
+        <span>CASETAS</span><i></i><span>CAMAS</span><i></i><span>JAULAS</span><i></i><span>COMEDEROS</span><i></i><span>TOLVAS</span>
       </div>
     </section>
 
-    <section id="servicios" class="section products-section">
+    <section id="productos" class="section solutions-section">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <div>
             <span class="section-label">Productos</span>
-            <h2>Equipamiento porcícola</h2>
+            <h2>Equipamiento porcícola.</h2>
           </div>
-
           <p>
-            Fabricación de implementos para diferentes necesidades dentro de
-            una operación porcícola.
+            Productos fabricados por Estructuras Jiménez para distintas necesidades del sector porcícola.
           </p>
         </div>
 
-        <div class="products-grid">
-          {
-            products.map((product) => (
-              <article class="product-card">
-                <span class="product-number">{product.number}</span>
-                <h3>{product.title}</h3>
-                <p>{product.description}</p>
-                <div class="card-line"></div>
-              </article>
-            ))
-          }
+        <div class="solutions-grid products-grid-eight">
+          {products.map((product) => (
+            <article class="solution-card reveal">
+              <div class={'solution-icon icon-' + product.icon} aria-hidden="true"><span></span><i></i></div>
+              <div class="solution-meta"><span>{product.number}</span><small>{product.eyebrow}</small></div>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <a href="#cotizar" data-service={product.title}>Cotizar <span aria-hidden="true">↗</span></a>
+            </article>
+          ))}
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section contact-section">
-      <div class="container contact-grid">
-        <div>
-          <span class="section-label light">Contacto</span>
-
-          <h2>Hablemos de lo que necesitas fabricar.</h2>
-
+    <section class="section blueprint-section" aria-label="Catálogo visual">
+      <div class="container blueprint-layout">
+        <div class="blueprint-copy reveal">
+          <span class="section-label">Catálogo visual</span>
+          <h2>Una identidad hecha para el sector porcícola.</h2>
           <p>
-            Comunícate directamente con nuestra oficina para solicitar
-            información sobre nuestros productos.
+            Casetas, camas, jaulas, comederos, tolvas y bodegas presentados dentro de una misma identidad visual.
           </p>
+
+          <div class="blueprint-list">
+            <button class="blueprint-item is-active" type="button" data-zone="casetas">
+              <span>01</span><strong>Casetas de engorda</strong><small>Sector porcícola</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="camas">
+              <span>02</span><strong>Camas</strong><small>Maternidad y destete</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="jaulas">
+              <span>03</span><strong>Jaulas</strong><small>Gestación y uso porcícola</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="comederos">
+              <span>04</span><strong>Comederos</strong><small>Engorda y destete</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="tolvas">
+              <span>05</span><strong>Tolvas</strong><small>Almacenamiento de granos</small>
+            </button>
+          </div>
         </div>
 
-        <div class="contact-card">
-          <div class="contact-item">
-            <span>Empresa</span>
+        <div class="blueprint-visual reveal">
+          <div class="blueprint-title">
+            <span>Visual técnico</span>
             <strong>Estructuras Jiménez</strong>
           </div>
 
-          <div class="contact-item">
-            <span>Ubicación</span>
-            <strong>Tepatitlán de Morelos, Jalisco, México</strong>
-          </div>
+          <svg viewBox="0 0 760 520" role="img" aria-label="Ilustración técnica conceptual">
+            <defs>
+              <pattern id="grid-small" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width="0.55" opacity=".15" />
+              </pattern>
+            </defs>
+            <rect width="760" height="520" fill="url(#grid-small)" rx="18" />
 
-          <div class="contact-item">
-            <span>Teléfono de oficina</span>
-            <a href="tel:+523781214083">378 121 4083</a>
-          </div>
+            <g class="bp-base" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M98 104 330 38l310 86v290H98Z" />
+              <path d="M98 104 330 168l310-44M330 38v376M98 414h542" />
+              <path d="M128 155h182v106H128ZM128 286h182v96H128Z" />
+              <path d="M354 174h112v208H354ZM486 151h124v100H486ZM486 278h124v104H486Z" />
+              <path d="M147 177h145M147 199h145M147 221h145" />
+              <path d="M377 195h66M377 222h66M377 249h66M377 276h66M377 303h66M377 330h66" />
+            </g>
 
-          <a class="button button-light" href="tel:+523781214083">
-            Llamar ahora
-          </a>
+            <g class="bp-zone is-active" data-zone-shape="casetas"><path d="M98 104 330 38l310 86v290H98Z" /></g>
+            <g class="bp-zone" data-zone-shape="camas"><rect x="128" y="155" width="182" height="106" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="jaulas"><rect x="354" y="174" width="112" height="208" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="comederos"><rect x="128" y="286" width="182" height="96" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="tolvas"><rect x="486" y="151" width="124" height="100" rx="6" /><path d="M515 165h66l-12 67h-42Z" /></g>
+          </svg>
+
+          <div class="blueprint-readout">
+            <span>Selección</span>
+            <strong data-blueprint-name>Casetas y bodegas</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="privacidad" class="section privacy-section">
-      <div class="container privacy-content">
-        <div>
-          <span class="section-label">Privacidad</span>
-          <h2>Aviso de privacidad</h2>
+    <section class="statement-section">
+      <div class="container statement-grid">
+        <div class="statement-number reveal">EJ<span>·</span>MX</div>
+        <div class="statement-copy reveal">
+          <span class="section-label">Estructuras Jiménez</span>
+          <p class="brand-statement">Fabricación de implementos y equipamiento para el sector porcícola.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section about-section">
+      <div class="container about-layout">
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="about-grid"></div>
+          <img src="/brand/estructuras-jimenez.svg" alt="" width="520" height="400" />
+          <span>TEPATITLÁN DE MORELOS · JALISCO</span>
+        </div>
+        <div class="about-copy reveal">
+          <span class="section-label">Nosotros</span>
+          <h2>Estructuras Jiménez.</h2>
+          <p>
+            Empresa ubicada en Tepatitlán de Morelos, Jalisco, dedicada a la fabricación de implementos y equipamiento para el sector porcícola.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cotizar" class="section quote-section">
+      <div class="container quote-layout">
+        <div class="quote-intro reveal" id="contacto">
+          <span class="section-label light">Cotización</span>
+          <h2>Cuéntanos qué necesitas.</h2>
+          <p>
+            Completa los datos disponibles para preparar tu solicitud de cotización.
+          </p>
+
+          <div class="quote-contact">
+            <a href="tel:+523781214083"><small>Teléfono de oficina</small><strong>378 121 4083</strong><em aria-hidden="true">↗</em></a>
+            <a href="mailto:gusestructuras23@gmail.com"><small>Correo</small><strong>gusestructuras23@gmail.com</strong><em aria-hidden="true">↗</em></a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Periferico+Salvador+Zuniga+1871,+Tepatitlan+de+Morelos,+Jalisco" target="_blank" rel="noopener noreferrer"><small>Ubicación</small><strong>Periférico Salvador Zúñiga 1871</strong><em aria-hidden="true">↗</em></a>
+          </div>
         </div>
 
-        <div class="privacy-copy">
-          <p>
-            Estructuras Jiménez es responsable del tratamiento de los datos
-            personales que, en su caso, sean proporcionados de manera
-            voluntaria al ponerse en contacto con la empresa.
-          </p>
+        <form class="quote-form reveal" id="quote-form">
+          <div class="form-head">
+            <span>Solicitud de cotización</span>
+            <small>* Información necesaria</small>
+          </div>
 
-          <p>
-            Los datos proporcionados serán utilizados para atender solicitudes
-            de información, contacto y seguimiento relacionado con nuestros
-            productos y servicios.
-          </p>
+          <div class="form-grid">
+            <label>
+              <span>Nombre o empresa *</span>
+              <input name="name" autocomplete="name" required placeholder="Nombre o empresa" />
+            </label>
+            <label>
+              <span>Teléfono *</span>
+              <input name="phone" autocomplete="tel" required inputmode="tel" placeholder="378 000 0000" />
+            </label>
+            <label>
+              <span>Producto *</span>
+              <select name="service" required>
+                <option value="">Selecciona una opción</option>
+                {products.map((product) => <option value={product.title}>{product.title}</option>)}
+              </select>
+            </label>
+            <label>
+              <span>Ubicación del proyecto</span>
+              <input name="location" placeholder="Municipio / Estado" />
+            </label>
+            <label>
+              <span>Cantidad o medidas</span>
+              <input name="dimensions" placeholder="Dato aproximado" />
+            </label>
+            <label>
+              <span>Correo</span>
+              <input name="email" autocomplete="email" type="email" placeholder="correo@empresa.com" />
+            </label>
+            <label class="form-full">
+              <span>Información adicional</span>
+              <textarea name="details" rows="5" placeholder="Agrega cualquier dato que quieras incluir en la solicitud."></textarea>
+            </label>
+          </div>
 
-          <p>
-            Esta versión del sitio no cuenta con formularios de captura de
-            datos personales. El alojamiento puede procesar datos técnicos
-            necesarios para la operación y seguridad del sitio.
-          </p>
+          <label class="consent">
+            <input type="checkbox" required />
+            <span>Acepto que Estructuras Jiménez utilice estos datos para atender mi solicitud.</span>
+          </label>
 
-          <p>
-            Para cualquier consulta relacionada con privacidad puede
-            comunicarse al teléfono de oficina
-            <a href="tel:+523781214083">378 121 4083</a>.
-          </p>
+          <div class="form-actions">
+            <button class="button button-light-pink" type="submit">Preparar solicitud <span aria-hidden="true">↗</span></button>
+            <button class="button button-copy" type="button" id="copy-quote">Copiar resumen</button>
+            <p id="quote-status" aria-live="polite">Puedes enviarla por correo o copiar el resumen.</p>
+          </div>
+        </form>
+      </div>
+    </section>
 
-          <small>Última actualización: septiembre de 2026.</small>
-        </div>
+    <section id="privacidad" class="privacy-section">
+      <div class="container privacy-row">
+        <a href="/aviso-de-privacidad">Aviso de privacidad →</a>
+        <a href="#inicio">Volver al inicio ↑</a>
       </div>
     </section>
   </main>
 
+  <div class="mobile-quick-actions" aria-label="Acciones rápidas">
+    <a href="tel:+523781214083">Llamar</a>
+    <a href="#cotizar">Cotizar</a>
+  </div>
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand footer-brand">
-        <span class="brand-mark">EJ</span>
-        <span class="brand-name">
-          <strong>Estructuras</strong>
-          <span>Jiménez</span>
-        </span>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/brand/estructuras-jimenez.svg" alt="Estructuras Jiménez" width="150" height="115" />
+        <p>Implementos y equipamiento para el sector porcícola.</p>
       </div>
 
-      <div class="footer-copy">
-        <span>© {year} Estructuras Jiménez</span>
-        <span>Tepatitlán de Morelos, Jalisco, México</span>
+      <div>
+        <span>Navegación</span>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#cotizar">Cotizar</a>
+      </div>
+
+      <div>
+        <span>Contacto</span>
+        <a href="tel:+523781214083">378 121 4083</a>
+        <a href="mailto:gusestructuras23@gmail.com">Correo</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Periferico+Salvador+Zuniga+1871,+Tepatitlan+de+Morelos,+Jalisco" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+        <small>Tepatitlán de Morelos, Jalisco</small>
+      </div>
+
+      <div class="footer-signature">
+        <strong>© {year}</strong>
+        <span>Estructuras Jiménez</span>
       </div>
     </div>
   </footer>
 
   <script is:inline>
-    const button = document.querySelector('.menu-toggle');
+    const menuButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
+    const header = document.querySelector('.site-header');
 
-    button?.addEventListener('click', () => {
-      const open = button.getAttribute('aria-expanded') === 'true';
-      button.setAttribute('aria-expanded', String(!open));
+    const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+
+    menuButton?.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
       nav?.classList.toggle('open');
     });
 
-    document.querySelectorAll('.main-nav a').forEach((link) => {
+    document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener('click', () => {
+      menuButton?.setAttribute('aria-expanded', 'false');
+      nav?.classList.remove('open');
+    }));
+
+    document.querySelectorAll('[data-service]').forEach((link) => {
       link.addEventListener('click', () => {
-        button?.setAttribute('aria-expanded', 'false');
-        nav?.classList.remove('open');
+        const select = document.querySelector('select[name="service"]');
+        if (select instanceof HTMLSelectElement) select.value = link.getAttribute('data-service') || '';
       });
+    });
+
+    const zoneNames = {
+      casetas: 'Casetas y bodegas',
+      camas: 'Camas de maternidad y destete',
+      jaulas: 'Jaulas porcícolas',
+      comederos: 'Comederos',
+      tolvas: 'Tolvas para granos'
+    };
+
+    const setBlueprintZone = (zone) => {
+      document.querySelectorAll('.blueprint-item').forEach((item) => {
+        item.classList.toggle('is-active', item.getAttribute('data-zone') === zone);
+      });
+      document.querySelectorAll('[data-zone-shape]').forEach((shape) => {
+        shape.classList.toggle('is-active', shape.getAttribute('data-zone-shape') === zone);
+      });
+      const readout = document.querySelector('[data-blueprint-name]');
+      if (readout) readout.textContent = zoneNames[zone] || 'Producto';
+    };
+
+    document.querySelectorAll('.blueprint-item').forEach((item) => {
+      const zone = item.getAttribute('data-zone');
+      if (!zone) return;
+      item.addEventListener('mouseenter', () => setBlueprintZone(zone));
+      item.addEventListener('focus', () => setBlueprintZone(zone));
+      item.addEventListener('click', () => setBlueprintZone(zone));
+    });
+
+    const buildQuoteBody = (data) => [
+      'SOLICITUD DE COTIZACIÓN - ESTRUCTURAS JIMÉNEZ',
+      '',
+      'Nombre / empresa: ' + (data.get('name') || ''),
+      'Teléfono: ' + (data.get('phone') || ''),
+      'Correo: ' + (data.get('email') || 'No indicado'),
+      'Producto: ' + (data.get('service') || ''),
+      'Ubicación: ' + (data.get('location') || 'No indicada'),
+      'Cantidad o medidas: ' + (data.get('dimensions') || 'No indicadas'),
+      '',
+      'Información adicional:',
+      String(data.get('details') || 'Sin información adicional')
+    ].join('\n');
+
+    const copyButton = document.querySelector('#copy-quote');
+    copyButton?.addEventListener('click', async () => {
+      const quoteForm = document.querySelector('#quote-form');
+      if (!(quoteForm instanceof HTMLFormElement)) return;
+      const summary = buildQuoteBody(new FormData(quoteForm));
+      const status = document.querySelector('#quote-status');
+      try {
+        await navigator.clipboard.writeText(summary);
+        if (status) status.textContent = 'Resumen copiado.';
+      } catch {
+        if (status) status.textContent = 'No se pudo copiar automáticamente.';
+      }
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((item) => revealObserver.observe(item));
+
+    const form = document.querySelector('#quote-form');
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!(form instanceof HTMLFormElement)) return;
+      const data = new FormData(form);
+      const subject = 'Solicitud de cotización - ' + (data.get('service') || 'Estructuras Jiménez');
+      const body = buildQuoteBody(data);
+      window.location.href = 'mailto:gusestructuras23@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      const status = document.querySelector('#quote-status');
+      if (status) status.textContent = 'Solicitud preparada.';
     });
   </script>
 </BaseLayout>

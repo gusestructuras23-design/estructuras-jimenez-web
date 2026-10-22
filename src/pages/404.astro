@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const title = 'Página no encontrada | Estructuras Jiménez';
+const description = 'La página que buscas no está disponible.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="not-found">
+    <div class="not-found-grid" aria-hidden="true"></div>
+    <div class="container not-found-content">
+      <img src="/brand/estructuras-jimenez.svg" alt="Estructuras Jiménez" width="190" height="146" />
+      <span>404</span>
+      <h1>Esta estructura no está en el plano.</h1>
+      <p>La página que buscas cambió de ubicación o ya no está disponible.</p>
+      <a class="button button-primary" href="/">Volver al inicio</a>
+    </div>
+  </main>
+</BaseLayout>
