@@ -1,5 +1,5 @@
 @media (max-width: 1040px) {
-  .hero-layout, .about-layout, .quote-layout, .blueprint-layout { grid-template-columns: 1fr; }
+  .hero-layout, .about-layout, .quote-layout, .blueprint-layout, .faq-layout { grid-template-columns: 1fr; }
   .hero-layout { padding-top: 44px; }
   .hero-copy { padding-bottom: 0; }
   .hero-art { min-height: 520px; }
@@ -10,6 +10,7 @@
   .statement-number { font-size: 120px; }
   .quote-layout { gap: 48px; }
   .blueprint-layout { gap: 46px; }
+  .faq-layout { gap: 42px; }
   .blueprint-visual { min-height: 560px; }
   .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
   .footer-signature { display: none; }
@@ -59,6 +60,8 @@
   .form-actions { flex-direction: column; align-items: stretch; }
   .form-actions p { max-width: none; }
   .privacy-row { flex-direction: column; }
+  .faq-list summary { font-size: 15px; padding-right: 38px; }
+  .faq-list details p { padding-right: 18px; }
   .blueprint-visual { min-height: 430px; padding: 18px; border-radius: 20px; }
   .blueprint-title { gap: 16px; }
   .blueprint-readout { left: 18px; right: 18px; bottom: 16px; }
