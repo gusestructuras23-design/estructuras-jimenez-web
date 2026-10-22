@@ -31,7 +31,7 @@
 .statement-number { color: rgba(255,255,255,.12); font-size: clamp(96px, 15vw, 210px); line-height: .75; font-weight: 820; letter-spacing: -.08em; white-space: nowrap; }
 .statement-number span { color: var(--pink); }
 .statement-copy .section-label { color: var(--pink); }
-.statement-copy blockquote { margin: 24px 0 0; max-width: 760px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -.04em; font-weight: 650; }
+.statement-copy .brand-statement { margin: 24px 0 0; max-width: 760px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -.04em; font-weight: 650; }
 
 .process-section { background: var(--canvas); }
 .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #dcd6d3; }
@@ -151,3 +151,49 @@
 .button-copy:hover { border-color: #c7b9b7; background: #fbf8f8; }
 
 .mobile-quick-actions { display: none; }
+
+
+.faq-section { background: #fff; border-top: 1px solid var(--line); }
+.faq-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 90px; align-items: start; }
+.faq-intro h2 { margin: 16px 0 20px; max-width: 520px; color: var(--charcoal); font-size: clamp(38px,4vw,58px); line-height: 1.04; letter-spacing: -.045em; }
+.faq-intro > p { max-width: 480px; margin: 0; color: var(--muted); }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary {
+  position: relative; padding: 24px 44px 24px 0; list-style: none; cursor: pointer;
+  color: var(--charcoal); font-size: 17px; font-weight: 720;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: "+"; position: absolute; right: 4px; top: 20px;
+  color: #b77b84; font-size: 24px; font-weight: 400; transition: transform 180ms ease;
+}
+.faq-list details[open] summary::after { transform: rotate(45deg); }
+.faq-list details p { max-width: 760px; margin: -4px 0 24px; padding-right: 50px; color: var(--muted); font-size: 14px; }
+.privacy-copy p a { color: var(--charcoal); font-weight: 700; }
+
+.legal-page { min-height: 100vh; padding: 70px 0 110px; background: var(--canvas); }
+.legal-shell { max-width: 920px; }
+.legal-back { display: inline-flex; margin-bottom: 70px; color: #786f72; font-size: 12px; font-weight: 700; }
+.legal-heading { padding-bottom: 38px; border-bottom: 1px solid var(--line); }
+.legal-heading h1 { margin: 14px 0 12px; color: var(--charcoal); font-size: clamp(48px,7vw,84px); line-height: .95; letter-spacing: -.055em; }
+.legal-heading > p { margin: 0; color: #91898c; font-size: 12px; }
+.legal-content { margin-top: 18px; }
+.legal-content section { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.legal-content h2 { margin: 0; color: var(--charcoal); font-size: 15px; }
+.legal-content p { margin: 0; color: var(--muted); font-size: 14px; }
+.legal-content a { color: var(--charcoal); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+.not-found { position: relative; min-height: 100vh; display: grid; place-items: center; overflow: hidden; background: #f8f6f5; }
+.not-found-grid { position: absolute; inset: 0; opacity: .5; background-image: linear-gradient(rgba(48,40,49,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(48,40,49,.04) 1px,transparent 1px); background-size: 42px 42px; }
+.not-found-content { position: relative; max-width: 760px; text-align: center; }
+.not-found-content img { width: 170px; margin: 0 auto 18px; }
+.not-found-content > span { display: block; color: var(--pink-deep); font-size: 12px; font-weight: 850; letter-spacing: .18em; }
+.not-found-content h1 { margin: 16px auto; color: var(--charcoal); font-size: clamp(44px,7vw,78px); line-height: .96; letter-spacing: -.055em; }
+.not-found-content p { margin: 0 auto 28px; max-width: 520px; color: var(--muted); }
+.not-found-content .button { width: auto; }
+@media (max-width: 760px) {
+  .legal-page { padding: 36px 0 82px; }
+  .legal-back { margin-bottom: 46px; }
+  .legal-content section { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
+}
