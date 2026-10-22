@@ -13,40 +13,16 @@
   .hero-sequence { right: auto; left: 0; top: 52px; transform: translateY(-100%); }
   .hero-art { min-height: 520px; }
   .hero-brand-stamp { right: 12%; width: 350px; }
-  .barn-wireframe { right: 0; width: 78%; }
-
-  .blueprint-layout { gap: 50px; }
-  .blueprint-visual { min-height: 560px; }
-
-  .statement-grid { grid-template-columns: 1fr; gap: 28px; }
-  .statement-number { font-size: 116px; }
-
-  .about-layout { gap: 50px; }
-  .quote-layout { gap: 48px; }
-
-  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
-  .footer-signature { display: none; }
-}
-
-@media (max-width: 760px) {
-  .container { width: min(calc(100% - 28px), var(--max)); }
-  .section { padding: 84px 0; }
-
-  .header-inner { min-height: 72px; }
-  .brand {
-    width: 118px;
-    min-width: 118px;
-    height: 58px;
-  }
+  
   .brand img {
-    width: 118px;
-    max-height: 58px;
+    width: 92px;
+    max-height: 70px;
   }
 
   .menu-toggle { display: block; }
   .main-nav {
     position: absolute;
-    top: 72px;
+    top: 80px;
     left: 14px;
     right: 14px;
     display: none;
@@ -72,9 +48,9 @@
 
   .hero {
     min-height: 0;
-    padding-top: 72px;
+    padding-top: 80px;
   }
-  .hero-blueprint { inset: 72px 0 0 28%; }
+  .hero-blueprint { inset: 80px 0 0 28%; }
   .hero-layout { min-height: 0; }
   .hero-copy { padding-top: 78px; }
   .hero-sequence { top: 52px; }
@@ -91,13 +67,15 @@
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-art { min-height: 430px; }
+  .hero-art {
+    min-height: 390px;
+  }
   .hero-brand-stamp {
-    width: 278px;
-    top: 28px;
-    right: 0;
-    padding: 12px;
-    border-radius: 20px;
+    width: min(340px, 92%);
+    top: auto;
+    right: auto;
+    padding: 0;
+    border-radius: 0;
   }
   .barn-wireframe {
     width: 118%;
@@ -105,10 +83,11 @@
     bottom: 34px;
   }
   .hero-art-note {
-    left: 0;
-    bottom: 14px;
-    width: 232px;
-    padding: 14px 15px;
+    left: 50%;
+    bottom: 12px;
+    width: auto;
+    min-width: 230px;
+    padding: 11px 14px;
   }
   .hero-marquee {
     min-height: 68px;
