@@ -27,7 +27,7 @@
   height: 116px;
   right: -55px;
   top: -55px;
-  border: 1px solid rgba(241,168,178,.38);
+  border: 1px solid rgba(244,175,182,.38);
   border-radius: 50%;
   transition: transform 260ms ease, background 260ms ease;
 }
@@ -38,7 +38,7 @@
 }
 .solution-card:hover::after {
   transform: scale(1.3);
-  background: rgba(241,168,178,.06);
+  background: rgba(244,175,182,.06);
 }
 .solution-icon {
   position: relative;
@@ -137,7 +137,7 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 87% 18%, rgba(241,168,178,.13), transparent 25rem),
+    radial-gradient(circle at 87% 18%, rgba(244,175,182,.13), transparent 25rem),
     #f6f3f2;
   border-top: 1px solid var(--line);
 }
@@ -245,13 +245,13 @@
 }
 .bp-base { color: rgba(255,255,255,.35); }
 .bp-zone {
-  fill: rgba(241,168,178,0);
-  stroke: rgba(241,168,178,0);
+  fill: rgba(244,175,182,0);
+  stroke: rgba(244,175,182,0);
   stroke-width: 4;
   transition: fill 220ms ease, stroke 220ms ease;
 }
 .bp-zone.is-active {
-  fill: rgba(241,168,178,.15);
+  fill: rgba(244,175,182,.15);
   stroke: var(--pink);
 }
 .blueprint-readout {
@@ -339,17 +339,17 @@
   height: 400px;
   right: -110px;
   top: -95px;
-  border: 76px solid rgba(241,168,178,.25);
+  border: 76px solid rgba(244,175,182,.25);
   border-radius: 50%;
 }
 .about-visual img {
   position: relative;
   z-index: 2;
-  width: min(390px,78%);
-  padding: 14px;
+  width: min(420px,82%);
+  padding: 18px;
   border-radius: 24px;
-  background: rgba(255,255,255,.96);
-  box-shadow: 0 24px 48px rgba(0,0,0,.16);
+  background: #fff;
+  box-shadow: 0 26px 54px rgba(0,0,0,.18);
 }
 .about-visual > span {
   position: absolute;
@@ -382,7 +382,7 @@
   height: 520px;
   left: -220px;
   bottom: -280px;
-  border: 90px solid rgba(241,168,178,.055);
+  border: 90px solid rgba(244,175,182,.055);
   border-radius: 50%;
 }
 .quote-layout {
@@ -501,7 +501,7 @@
 .form-grid textarea:focus {
   border-color: #cc8c96;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(241,168,178,.2);
+  box-shadow: 0 0 0 3px rgba(244,175,182,.2);
 }
 .form-grid input::placeholder,
 .form-grid textarea::placeholder { color: #aaa2a5; }
@@ -574,10 +574,11 @@
   align-items: start;
 }
 .footer-brand img {
-  width: 144px;
-  margin: -18px 0 -14px;
-  filter: brightness(0) invert(1);
-  opacity: .9;
+  width: 168px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(0,0,0,.16);
 }
 .footer-brand p {
   max-width: 300px;
