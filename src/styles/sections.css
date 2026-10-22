@@ -4,20 +4,37 @@
 .solution-card:hover { transform: translateY(-5px); border-color: #dacdcc; box-shadow: 0 18px 48px rgba(48,40,49,.07); }
 .solution-icon { position: relative; width: 78px; height: 62px; margin-bottom: 36px; color: var(--charcoal); }
 .solution-icon::before, .solution-icon::after, .solution-icon span, .solution-icon i { content: ""; position: absolute; display: block; border: 2px solid currentColor; }
-.icon-barn::before { inset: 22px 4px 4px; border-top: 0; }
-.icon-barn::after { width: 48px; height: 48px; left: 14px; top: 5px; border-width: 2px 2px 0 0; transform: rotate(-32deg) skew(-6deg); }
-.icon-barn span { left: 36px; top: 27px; height: 39px; border-width: 0 0 0 2px; }
-.icon-pen::before { inset: 13px 4px 6px; border-radius: 30px 30px 8px 8px; }
-.icon-pen::after { width: 42px; height: 2px; left: 18px; top: 31px; border: 0; background: var(--pink-deep); }
-.icon-grid::before { inset: 5px 3px; }
-.icon-grid::after { left: 26px; top: 5px; height: 57px; border-width: 0 0 0 2px; box-shadow: 24px 0 0 -0.5px var(--charcoal); }
-.icon-hopper::before { width: 54px; height: 32px; left: 11px; top: 4px; transform: perspective(80px) rotateX(-18deg); }
-.icon-hopper::after { width: 2px; height: 30px; left: 38px; top: 34px; border: 0; background: var(--charcoal); box-shadow: -18px 0 0 var(--charcoal), 18px 0 0 var(--charcoal); }
-.icon-custom::before { width: 52px; height: 52px; left: 12px; top: 4px; transform: rotate(45deg); }
-.icon-custom::after { width: 16px; height: 16px; left: 30px; top: 22px; background: var(--pink-soft); }
-.icon-beam::before { width: 64px; height: 16px; left: 7px; top: 8px; }
-.icon-beam::after { width: 64px; height: 16px; left: 7px; bottom: 8px; }
-.icon-beam span { width: 2px; height: 32px; left: 38px; top: 17px; border: 0; background: var(--charcoal); }
+.icon-caseta::before { inset: 23px 4px 4px; border-top: 0; }
+.icon-caseta::after { width: 49px; height: 49px; left: 14px; top: 5px; border-width: 2px 2px 0 0; transform: rotate(-32deg) skew(-6deg); }
+.icon-caseta span { left: 36px; top: 28px; height: 38px; border-width: 0 0 0 2px; }
+
+.icon-bodega::before { inset: 17px 5px 5px; border-top: 0; }
+.icon-bodega::after { width: 52px; height: 34px; left: 13px; top: 6px; border-width: 2px 2px 0 0; transform: rotate(-28deg) skew(-4deg); }
+.icon-bodega span { left: 17px; right: 17px; bottom: 14px; height: 17px; border-width: 2px 0 0; box-shadow: inset 0 8px 0 -6px var(--pink-deep); }
+
+.icon-maternidad::before { left: 5px; right: 5px; top: 15px; bottom: 9px; border-radius: 3px; }
+.icon-maternidad::after { left: 18px; top: 15px; height: 38px; border-width: 0 0 0 2px; box-shadow: 20px 0 0 -1px var(--charcoal), 40px 0 0 -1px var(--charcoal); }
+.icon-maternidad span { width: 10px; height: 10px; left: 33px; top: 27px; border-radius: 50%; background: var(--pink-soft); border-color: var(--pink-deep); }
+
+.icon-destete::before { left: 7px; right: 7px; top: 22px; height: 28px; }
+.icon-destete::after { left: 14px; right: 14px; top: 31px; height: 2px; border: 0; background: var(--pink-deep); box-shadow: 0 9px 0 var(--pink-deep); }
+.icon-destete span { left: 12px; bottom: 2px; width: 2px; height: 13px; border: 0; background: var(--charcoal); box-shadow: 52px 0 0 var(--charcoal); }
+
+.icon-gestacion::before { inset: 7px 4px; }
+.icon-gestacion::after { left: 17px; top: 7px; height: 55px; border-width: 0 0 0 2px; box-shadow: 14px 0 0 -1px var(--charcoal), 28px 0 0 -1px var(--charcoal), 42px 0 0 -1px var(--charcoal); }
+.icon-gestacion span { left: 5px; right: 5px; top: 35px; border-width: 2px 0 0; }
+
+.icon-jaula::before { inset: 6px 5px; }
+.icon-jaula::after { left: 5px; right: 5px; top: 24px; height: 2px; border: 0; background: var(--charcoal); box-shadow: 0 18px 0 var(--charcoal); }
+.icon-jaula span { left: 27px; top: 7px; height: 53px; border-width: 0 0 0 2px; box-shadow: 22px 0 0 -1px var(--charcoal); }
+
+.icon-comedero::before { width: 62px; height: 26px; left: 8px; top: 20px; clip-path: polygon(0 0,100% 0,88% 100%,12% 100%); background: transparent; }
+.icon-comedero::after { left: 18px; top: 13px; width: 42px; height: 2px; border: 0; background: var(--pink-deep); }
+.icon-comedero span { left: 18px; bottom: 6px; width: 2px; height: 12px; border: 0; background: var(--charcoal); box-shadow: 40px 0 0 var(--charcoal); }
+
+.icon-tolva::before { width: 52px; height: 35px; left: 13px; top: 5px; clip-path: polygon(0 0,100% 0,73% 100%,27% 100%); background: transparent; }
+.icon-tolva::after { width: 2px; height: 25px; left: 38px; top: 39px; border: 0; background: var(--charcoal); box-shadow: -18px 0 0 var(--charcoal), 18px 0 0 var(--charcoal); }
+.icon-tolva span { left: 25px; top: 51px; width: 28px; border-width: 2px 0 0; }
 .solution-meta { display: flex; align-items: center; gap: 10px; color: #ad7b82; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .solution-meta span { color: var(--charcoal); }
 .solution-meta small { padding-left: 10px; border-left: 1px solid var(--line); }
