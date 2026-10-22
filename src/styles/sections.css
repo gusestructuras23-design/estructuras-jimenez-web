@@ -58,7 +58,9 @@
 .quote-intro h2 { color: #fff; }
 .quote-intro > p { max-width: 520px; margin: 24px 0 0; color: #c6bdc0; font-size: 16px; }
 .quote-contact { margin-top: 44px; display: grid; gap: 10px; }
-.quote-contact a { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.quote-contact a { position: relative; padding: 16px 34px 16px 0; border-bottom: 1px solid rgba(255,255,255,.12); transition: padding-left 160ms ease, color 160ms ease; }
+.quote-contact a:hover { padding-left: 6px; color: #fff; }
+.quote-contact a em { position: absolute; right: 2px; top: 50%; transform: translateY(-50%); color: var(--pink); font-style: normal; }
 .quote-contact small, .quote-contact strong { display: block; }
 .quote-contact small { color: #9e9598; font-size: 10px; text-transform: uppercase; letter-spacing: .13em; }
 .quote-contact strong { margin-top: 4px; font-size: 16px; }
