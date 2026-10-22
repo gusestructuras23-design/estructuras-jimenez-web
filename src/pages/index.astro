@@ -353,6 +353,11 @@ const year = new Date().getFullYear();
   <script is:inline>
     const menuButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
+    const header = document.querySelector('.site-header');
+
+    const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
 
     menuButton?.addEventListener('click', () => {
       const open = menuButton.getAttribute('aria-expanded') === 'true';
