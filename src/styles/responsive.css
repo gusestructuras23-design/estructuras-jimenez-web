@@ -1,5 +1,5 @@
 @media (max-width: 1040px) {
-  .hero-layout, .about-layout, .quote-layout { grid-template-columns: 1fr; }
+  .hero-layout, .about-layout, .quote-layout, .blueprint-layout { grid-template-columns: 1fr; }
   .hero-layout { padding-top: 44px; }
   .hero-copy { padding-bottom: 0; }
   .hero-art { min-height: 520px; }
@@ -9,6 +9,8 @@
   .statement-grid { grid-template-columns: 1fr; gap: 24px; }
   .statement-number { font-size: 120px; }
   .quote-layout { gap: 48px; }
+  .blueprint-layout { gap: 46px; }
+  .blueprint-visual { min-height: 560px; }
   .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
   .footer-signature { display: none; }
 }
@@ -57,6 +59,23 @@
   .form-actions { flex-direction: column; align-items: stretch; }
   .form-actions p { max-width: none; }
   .privacy-row { flex-direction: column; }
+  .blueprint-visual { min-height: 430px; padding: 18px; border-radius: 20px; }
+  .blueprint-title { gap: 16px; }
+  .blueprint-readout { left: 18px; right: 18px; bottom: 16px; }
+  .mobile-quick-actions {
+    position: fixed; z-index: 70; left: 12px; right: 12px; bottom: 12px;
+    display: grid; grid-template-columns: .75fr 1.25fr; gap: 8px; padding: 8px;
+    border: 1px solid rgba(232,227,225,.95); border-radius: 18px;
+    background: rgba(255,255,255,.92); backdrop-filter: blur(18px);
+    box-shadow: 0 16px 42px rgba(48,40,49,.14);
+  }
+  .mobile-quick-actions a {
+    min-height: 44px; display: flex; align-items: center; justify-content: center;
+    border-radius: 12px; font-size: 12px; font-weight: 780;
+  }
+  .mobile-quick-actions a:first-child { background: #f5eeee; color: var(--charcoal); }
+  .mobile-quick-actions a:last-child { background: var(--charcoal); color: #fff; }
+  .site-footer { padding-bottom: 118px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 34px 26px; }
   .footer-brand { grid-column: 1 / -1; }
 }
