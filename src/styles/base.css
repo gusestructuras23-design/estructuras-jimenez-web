@@ -37,6 +37,11 @@ img { max-width: 100%; height: auto; display: block; }
 
 .container { width: min(calc(100% - 52px), var(--max)); margin: 0 auto; }
 .section { padding: 124px 0; }
+section[id] { scroll-margin-top: 104px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid rgba(217,130,143,.32);
+  outline-offset: 3px;
+}
 
 .site-header {
   position: fixed;
@@ -45,6 +50,12 @@ img { max-width: 100%; height: auto; display: block; }
   background: rgba(247,245,243,.9);
   border-bottom: 1px solid rgba(229,223,221,.92);
   backdrop-filter: blur(18px) saturate(150%);
+  transition: background 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.site-header.is-scrolled {
+  background: rgba(255,255,255,.94);
+  border-bottom-color: rgba(217,202,202,.9);
+  box-shadow: 0 10px 32px rgba(49,52,55,.055);
 }
 .header-inner {
   min-height: 88px;
