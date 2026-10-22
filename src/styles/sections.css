@@ -33,14 +33,6 @@
 .statement-copy .section-label { color: var(--pink); }
 .statement-copy .brand-statement { margin: 24px 0 0; max-width: 760px; font-size: clamp(30px, 4vw, 52px); line-height: 1.1; letter-spacing: -.04em; font-weight: 650; }
 
-.process-section { background: var(--canvas); }
-.process-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #dcd6d3; }
-.process-step { min-height: 210px; padding: 30px 28px; display: grid; grid-template-columns: 70px 1fr; gap: 20px; border-bottom: 1px solid #dcd6d3; }
-.process-step:nth-child(odd) { border-right: 1px solid #dcd6d3; }
-.process-step > span { color: #bb7882; font-size: 11px; font-weight: 850; letter-spacing: .12em; }
-.process-step h3 { margin: 0 0 10px; color: var(--charcoal); font-size: 22px; }
-.process-step p { max-width: 500px; margin: 0; color: var(--muted); font-size: 14px; }
-
 .about-section { background: #fff; }
 .about-layout { display: grid; grid-template-columns: .95fr 1.05fr; gap: 96px; align-items: center; }
 .about-visual { position: relative; min-height: 520px; overflow: hidden; border-radius: 28px; background: var(--charcoal); color: #fff; }
@@ -49,8 +41,6 @@
 .about-pig { position: absolute; left: 52px; top: 58px; color: var(--pink); font-size: 120px; font-weight: 820; letter-spacing: -.08em; }
 .about-visual > span { position: absolute; left: 54px; bottom: 48px; color: rgba(255,255,255,.78); font-size: 15px; font-weight: 760; letter-spacing: .18em; }
 .about-copy > p { max-width: 620px; margin: 24px 0 0; color: var(--muted); font-size: 17px; }
-.about-values { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 8px; }
-.about-values span { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; color: #655d60; background: #fbfaf9; font-size: 11px; font-weight: 720; }
 
 .quote-section { background: #2f292f; color: #fff; }
 .quote-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: 78px; align-items: start; }
@@ -155,23 +145,6 @@
 .mobile-quick-actions { display: none; }
 
 
-.faq-section { background: #fff; border-top: 1px solid var(--line); }
-.faq-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 90px; align-items: start; }
-.faq-intro h2 { margin: 16px 0 20px; max-width: 520px; color: var(--charcoal); font-size: clamp(38px,4vw,58px); line-height: 1.04; letter-spacing: -.045em; }
-.faq-intro > p { max-width: 480px; margin: 0; color: var(--muted); }
-.faq-list { border-top: 1px solid var(--line); }
-.faq-list details { border-bottom: 1px solid var(--line); }
-.faq-list summary {
-  position: relative; padding: 24px 44px 24px 0; list-style: none; cursor: pointer;
-  color: var(--charcoal); font-size: 17px; font-weight: 720;
-}
-.faq-list summary::-webkit-details-marker { display: none; }
-.faq-list summary::after {
-  content: "+"; position: absolute; right: 4px; top: 20px;
-  color: #b77b84; font-size: 24px; font-weight: 400; transition: transform 180ms ease;
-}
-.faq-list details[open] summary::after { transform: rotate(45deg); }
-.faq-list details p { max-width: 760px; margin: -4px 0 24px; padding-right: 50px; color: var(--muted); font-size: 14px; }
 .privacy-copy p a { color: var(--charcoal); font-weight: 700; }
 
 .legal-page { min-height: 100vh; padding: 70px 0 110px; background: var(--canvas); }
@@ -198,4 +171,13 @@
   .legal-page { padding: 36px 0 82px; }
   .legal-back { margin-bottom: 46px; }
   .legal-content section { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
+}
+
+.products-grid-eight { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.products-grid-eight .solution-card { min-height: 338px; }
+@media (max-width: 1120px) {
+  .products-grid-eight { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .products-grid-eight { grid-template-columns: 1fr; }
 }
