@@ -4,7 +4,7 @@
   .quote-layout { grid-template-columns: 1fr; }
   .hero-copy { padding-top: 76px; }
   .hero-brand { min-height: 520px; }
-  .hero-brand-frame { width: min(520px,78vw); }
+  .hero-brand-stage { width: min(540px,80vw); }
 
   .products-layout { grid-template-columns: 1fr; gap: 48px; }
   .products-intro { position: static; }
@@ -12,7 +12,7 @@
 
   .technical-layout { gap: 52px; }
   .about-layout { grid-template-columns: .22fr .78fr; }
-  .about-mark { grid-column: 2; border-left: 0; border-top: 1px solid var(--line); min-height: 300px; }
+  .about-data { grid-column: 2; }
 
   .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; }
   .footer-signature { display: none; }
@@ -56,8 +56,19 @@
   .hero-bottom { grid-template-columns: 1fr; gap: 26px; }
   .hero-actions { flex-direction: row; flex-wrap: wrap; }
   .hero-brand { min-height: 400px; }
-  .hero-brand-frame { width: min(350px,94%); min-height: 365px; }
+  .hero-brand-stage {
+    width: min(360px,94%);
+    min-height: 365px;
+    padding: 44px 20px 36px;
+  }
+  .hero-brand-meta {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    font-size: 6px;
+  }
   .brand-mark-hero { width: 92%; }
+  .hero-brand-rule { left: 14px; right: 14px; bottom: 14px; }
   .hero-rail { grid-template-columns: 1fr; }
   .hero-rail > div,
   .hero-rail > div:nth-child(2),
@@ -88,8 +99,7 @@
 
   .about-layout { grid-template-columns: 1fr; gap: 30px; }
   .about-index { font-size: 90px; }
-  .about-mark { grid-column: auto; min-height: 260px; border-top: 1px solid var(--line); }
-  .brand-mark-about { width: min(280px,84%); }
+  .about-data { grid-column: auto; }
 
   .quote-section { padding: 86px 0; }
   .quote-form { padding: 22px; }
