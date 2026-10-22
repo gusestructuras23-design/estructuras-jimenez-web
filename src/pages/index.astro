@@ -2,60 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
-const title = 'Estructuras Jiménez | Equipamiento y estructuras para el sector porcícola';
+const title = 'Estructuras Jiménez | Equipamiento para el sector porcícola';
 const description =
-  'Fabricación de estructuras, casetas, jaulas, camas, comederos y soluciones para el sector porcícola en Tepatitlán de Morelos, Jalisco.';
+  'Estructuras Jiménez. Fabricación de implementos y equipamiento para el sector porcícola en Tepatitlán de Morelos, Jalisco.';
 
 const products = [
-  {
-    number: '01',
-    title: 'Casetas y bodegas',
-    eyebrow: 'Infraestructura',
-    description: 'Estructuras para producción, resguardo y operación diaria en granja.',
-    icon: 'barn'
-  },
-  {
-    number: '02',
-    title: 'Maternidad y destete',
-    eyebrow: 'Equipamiento',
-    description: 'Camas y soluciones fabricadas para las distintas etapas de producción.',
-    icon: 'pen'
-  },
-  {
-    number: '03',
-    title: 'Jaulas de gestación',
-    eyebrow: 'Porcicultura',
-    description: 'Fabricación de jaulas y estructuras metálicas adaptadas a cada proyecto.',
-    icon: 'grid'
-  },
-  {
-    number: '04',
-    title: 'Comederos y tolvas',
-    eyebrow: 'Alimentación',
-    description: 'Sistemas de alimentación y almacenamiento para operación porcícola.',
-    icon: 'hopper'
-  },
-  {
-    number: '05',
-    title: 'Proyectos especiales',
-    eyebrow: 'A medida',
-    description: 'Fabricación especial cuando tu granja necesita una solución fuera de catálogo.',
-    icon: 'custom'
-  },
-  {
-    number: '06',
-    title: 'Estructuras metálicas',
-    eyebrow: 'Fabricación',
-    description: 'Soluciones en acero para ampliaciones, adecuaciones y nuevas instalaciones.',
-    icon: 'beam'
-  }
-];
-
-const process = [
-  ['01', 'Cuéntanos tu proyecto', 'Indica qué necesitas fabricar, ubicación, medidas aproximadas y objetivo.'],
-  ['02', 'Revisamos la necesidad', 'Analizamos la información y definimos los datos que faltan para cotizar correctamente.'],
-  ['03', 'Preparamos la cotización', 'Recibes una propuesta clara para continuar con la fabricación y el seguimiento del proyecto.'],
-  ['04', 'Fabricamos', 'El proyecto pasa a producción conforme a lo acordado con el cliente.']
+  { number: '01', title: 'Casetas de engorda', eyebrow: 'Infraestructura', description: 'Fabricación de casetas destinadas a operaciones de engorda porcícola.', icon: 'barn' },
+  { number: '02', title: 'Bodegas', eyebrow: 'Estructuras', description: 'Fabricación de estructuras para bodegas.', icon: 'beam' },
+  { number: '03', title: 'Camas de maternidad', eyebrow: 'Maternidad', description: 'Fabricación de camas de maternidad en diferentes modelos.', icon: 'pen' },
+  { number: '04', title: 'Camas de destete', eyebrow: 'Destete', description: 'Fabricación de camas para la etapa de destete.', icon: 'pen' },
+  { number: '05', title: 'Jaulas de gestación', eyebrow: 'Gestación', description: 'Fabricación de jaulas para gestación porcícola.', icon: 'grid' },
+  { number: '06', title: 'Jaulas porcícolas', eyebrow: 'Equipamiento', description: 'Fabricación de jaulas destinadas al sector porcícola.', icon: 'grid' },
+  { number: '07', title: 'Comederos', eyebrow: 'Alimentación', description: 'Comederos para las etapas de engorda y destete.', icon: 'hopper' },
+  { number: '08', title: 'Tolvas para granos', eyebrow: 'Almacenamiento', description: 'Tolvas para almacenamiento de granos.', icon: 'hopper' }
 ];
 
 const structuredData = {
@@ -81,7 +40,7 @@ const year = new Date().getFullYear();
 <BaseLayout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
 
-  <header class="site-header" data-header>
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="Estructuras Jiménez, inicio">
         <img src="/brand/estructuras-jimenez.svg" alt="Estructuras Jiménez" width="168" height="129" />
@@ -92,10 +51,10 @@ const year = new Date().getFullYear();
       </button>
 
       <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-        <a href="#soluciones">Soluciones</a>
-        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#productos">Productos</a>
         <a href="#nosotros">Nosotros</a>
-        <a class="nav-quote" href="#cotizar">Cotizar proyecto</a>
+        <a href="#contacto">Contacto</a>
+        <a class="nav-quote" href="#cotizar">Cotizar</a>
       </nav>
     </div>
   </header>
@@ -109,163 +68,139 @@ const year = new Date().getFullYear();
         <div class="hero-copy reveal">
           <span class="eyebrow">Tepatitlán de Morelos · Jalisco</span>
           <h1>
-            Estructuras que hacen
-            <span>funcionar una granja.</span>
+            Equipamiento porcícola,
+            <span>fabricado en Tepatitlán.</span>
           </h1>
           <p>
-            Fabricamos infraestructura y equipamiento para el sector porcícola:
-            desde casetas y jaulas hasta comederos, tolvas y proyectos especiales.
+            Estructuras Jiménez fabrica implementos y equipamiento para el sector porcícola.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#cotizar">Solicitar cotización <span aria-hidden="true">↗</span></a>
-            <a class="button button-ghost" href="#soluciones">Explorar soluciones</a>
+            <a class="button button-ghost" href="#productos">Ver productos</a>
           </div>
 
-          <div class="hero-trust" aria-label="Información destacada">
-            <div><strong>Fabricación</strong><span>para el sector porcícola</span></div>
-            <div><strong>A medida</strong><span>según cada proyecto</span></div>
-            <div><strong>Atención directa</strong><span>desde Tepatitlán</span></div>
+          <div class="hero-trust" aria-label="Información principal">
+            <div><strong>Sector</strong><span>Porcícola</span></div>
+            <div><strong>Ubicación</strong><span>Tepatitlán de Morelos</span></div>
+            <div><strong>Contacto</strong><span>378 121 4083</span></div>
           </div>
         </div>
 
-        <div class="hero-art reveal" aria-label="Ilustración conceptual de estructura porcícola">
+        <div class="hero-art reveal" aria-hidden="true">
           <div class="brand-panel">
             <img src="/brand/estructuras-jimenez.svg" alt="" width="393" height="302" />
           </div>
-          <svg class="barn-wireframe" viewBox="0 0 620 420" role="img" aria-label="Estructura metálica de nave porcícola">
+
+          <svg class="barn-wireframe" viewBox="0 0 620 420">
             <g fill="none" stroke="currentColor" stroke-width="2">
               <path d="M72 315V136l235-92 242 98v173" />
               <path d="M72 136 307 44l242 98M307 44v271M72 315h477M72 136l235 74 242-68" />
               <path d="M122 155v160M172 174v141M222 190v125M272 206v109M357 190v125M407 172v143M457 154v161M507 140v175" opacity=".62" />
               <path d="M72 257h477M72 284h477" opacity=".45" />
-              <path d="m72 136 50 19 50-56 50 91 50-118 35 138 50-95 50 57 50-42 42 12" opacity=".32" />
             </g>
           </svg>
+
           <div class="hero-art-note">
-            <span>Proyecto · Fabricación · Seguimiento</span>
-            <strong>Soluciones pensadas para trabajar.</strong>
+            <span>Estructuras Jiménez</span>
+            <strong>Fabricación para el sector porcícola.</strong>
           </div>
         </div>
       </div>
 
       <div class="container hero-marquee" aria-hidden="true">
-        <span>CASETAS</span><i></i><span>JAULAS</span><i></i><span>COMEDEROS</span><i></i><span>TOLVAS</span><i></i><span>ESTRUCTURAS</span>
+        <span>CASETAS</span><i></i><span>CAMAS</span><i></i><span>JAULAS</span><i></i><span>COMEDEROS</span><i></i><span>TOLVAS</span>
       </div>
     </section>
 
-    <section id="soluciones" class="section solutions-section">
+    <section id="productos" class="section solutions-section">
       <div class="container">
         <div class="section-heading reveal">
           <div>
-            <span class="section-label">Qué fabricamos</span>
-            <h2>Soluciones que se adaptan a la operación.</h2>
+            <span class="section-label">Productos</span>
+            <h2>Equipamiento porcícola.</h2>
           </div>
           <p>
-            No todos los proyectos necesitan lo mismo. Podemos partir de una necesidad,
-            una medida, un plano o una idea para definir la solución adecuada.
+            Productos fabricados por Estructuras Jiménez para distintas necesidades del sector porcícola.
           </p>
         </div>
 
-        <div class="solutions-grid">
+        <div class="solutions-grid products-grid-eight">
           {products.map((product) => (
             <article class="solution-card reveal">
               <div class={'solution-icon icon-' + product.icon} aria-hidden="true"><span></span><i></i></div>
               <div class="solution-meta"><span>{product.number}</span><small>{product.eyebrow}</small></div>
               <h3>{product.title}</h3>
               <p>{product.description}</p>
-              <a href="#cotizar" data-service={product.title}>Cotizar esta solución <span aria-hidden="true">↗</span></a>
+              <a href="#cotizar" data-service={product.title}>Cotizar <span aria-hidden="true">↗</span></a>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-
-    <section class="section blueprint-section" id="plano">
+    <section class="section blueprint-section" aria-label="Catálogo visual">
       <div class="container blueprint-layout">
         <div class="blueprint-copy reveal">
-          <span class="section-label">Mapa de soluciones</span>
-          <h2>Una granja. Distintas necesidades.</h2>
+          <span class="section-label">Catálogo visual</span>
+          <h2>Una identidad hecha para el sector porcícola.</h2>
           <p>
-            Explora el esquema para ver dónde puede intervenir cada tipo de solución.
-            No es un catálogo cerrado: sirve como punto de partida para definir tu proyecto.
+            Esta sección utiliza una composición técnica inspirada en estructuras metálicas y equipamiento porcícola.
+            Las fotografías reales de productos y trabajos se integrarán después.
           </p>
 
-          <div class="blueprint-list" role="list">
-            <button class="blueprint-item is-active" type="button" data-zone="infraestructura">
-              <span>01</span><strong>Infraestructura</strong><small>Casetas, bodegas y estructura general</small>
+          <div class="blueprint-list">
+            <button class="blueprint-item is-active" type="button" data-zone="casetas">
+              <span>01</span><strong>Casetas y bodegas</strong><small>Estructuras</small>
             </button>
-            <button class="blueprint-item" type="button" data-zone="maternidad">
-              <span>02</span><strong>Maternidad y destete</strong><small>Camas y áreas de manejo</small>
+            <button class="blueprint-item" type="button" data-zone="camas">
+              <span>02</span><strong>Camas</strong><small>Maternidad y destete</small>
             </button>
-            <button class="blueprint-item" type="button" data-zone="gestacion">
-              <span>03</span><strong>Gestación</strong><small>Jaulas y organización de corrales</small>
+            <button class="blueprint-item" type="button" data-zone="jaulas">
+              <span>03</span><strong>Jaulas</strong><small>Gestación y uso porcícola</small>
             </button>
-            <button class="blueprint-item" type="button" data-zone="alimentacion">
-              <span>04</span><strong>Alimentación</strong><small>Comederos y puntos de servicio</small>
+            <button class="blueprint-item" type="button" data-zone="comederos">
+              <span>04</span><strong>Comederos</strong><small>Engorda y destete</small>
             </button>
-            <button class="blueprint-item" type="button" data-zone="almacenamiento">
-              <span>05</span><strong>Almacenamiento</strong><small>Tolvas y manejo de grano</small>
+            <button class="blueprint-item" type="button" data-zone="tolvas">
+              <span>05</span><strong>Tolvas</strong><small>Almacenamiento de granos</small>
             </button>
           </div>
         </div>
 
-        <div class="blueprint-visual reveal" data-blueprint>
+        <div class="blueprint-visual reveal">
           <div class="blueprint-title">
-            <span>Esquema conceptual</span>
+            <span>Visual técnico</span>
             <strong>Estructuras Jiménez</strong>
           </div>
 
-          <svg viewBox="0 0 760 520" role="img" aria-label="Plano conceptual de una instalación porcícola">
+          <svg viewBox="0 0 760 520" role="img" aria-label="Ilustración técnica conceptual">
             <defs>
               <pattern id="grid-small" width="24" height="24" patternUnits="userSpaceOnUse">
                 <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width="0.55" opacity=".15" />
               </pattern>
             </defs>
-
             <rect width="760" height="520" fill="url(#grid-small)" rx="18" />
 
             <g class="bp-base" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M98 104 330 38l310 86v290H98Z" />
-              <path d="M98 104 330 168l310-44M330 38v376" />
-              <path d="M98 414h542" />
+              <path d="M98 104 330 168l310-44M330 38v376M98 414h542" />
               <path d="M128 155h182v106H128ZM128 286h182v96H128Z" />
               <path d="M354 174h112v208H354ZM486 151h124v100H486ZM486 278h124v104H486Z" />
               <path d="M147 177h145M147 199h145M147 221h145" />
-              <path d="M147 309h145M147 333h145M147 357h145" />
               <path d="M377 195h66M377 222h66M377 249h66M377 276h66M377 303h66M377 330h66" />
             </g>
 
-            <g class="bp-zone is-active" data-zone-shape="infraestructura">
-              <path d="M98 104 330 38l310 86v290H98Z" />
-            </g>
-            <g class="bp-zone" data-zone-shape="maternidad">
-              <rect x="128" y="155" width="182" height="106" rx="6" />
-            </g>
-            <g class="bp-zone" data-zone-shape="gestacion">
-              <rect x="354" y="174" width="112" height="208" rx="6" />
-            </g>
-            <g class="bp-zone" data-zone-shape="alimentacion">
-              <rect x="128" y="286" width="182" height="96" rx="6" />
-            </g>
-            <g class="bp-zone" data-zone-shape="almacenamiento">
-              <rect x="486" y="151" width="124" height="100" rx="6" />
-              <path d="M515 165h66l-12 67h-42Z" />
-            </g>
-
-            <g class="bp-labels" fill="currentColor">
-              <text x="145" y="149">MATERNIDAD / DESTETE</text>
-              <text x="366" y="164">GESTACIÓN</text>
-              <text x="145" y="280">ALIMENTACIÓN</text>
-              <text x="494" y="142">TOLVAS / GRANO</text>
-              <text x="494" y="271">ÁREA FLEXIBLE</text>
-            </g>
+            <g class="bp-zone is-active" data-zone-shape="casetas"><path d="M98 104 330 38l310 86v290H98Z" /></g>
+            <g class="bp-zone" data-zone-shape="camas"><rect x="128" y="155" width="182" height="106" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="jaulas"><rect x="354" y="174" width="112" height="208" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="comederos"><rect x="128" y="286" width="182" height="96" rx="6" /></g>
+            <g class="bp-zone" data-zone-shape="tolvas"><rect x="486" y="151" width="124" height="100" rx="6" /><path d="M515 165h66l-12 67h-42Z" /></g>
           </svg>
 
           <div class="blueprint-readout">
-            <span>Zona seleccionada</span>
-            <strong data-blueprint-name>Infraestructura</strong>
+            <span>Selección</span>
+            <strong data-blueprint-name>Casetas y bodegas</strong>
           </div>
         </div>
       </div>
@@ -275,28 +210,8 @@ const year = new Date().getFullYear();
       <div class="container statement-grid">
         <div class="statement-number reveal">EJ<span>·</span>MX</div>
         <div class="statement-copy reveal">
-          <span class="section-label">Hecho para el campo</span>
-          <p class="brand-statement">Lo importante no es llenar una granja de acero. Es fabricar lo que realmente necesita para operar mejor.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="proceso" class="section process-section">
-      <div class="container">
-        <div class="section-heading compact reveal">
-          <div>
-            <span class="section-label">Cómo trabajamos</span>
-            <h2>De la necesidad a una cotización clara.</h2>
-          </div>
-        </div>
-
-        <div class="process-grid">
-          {process.map(([number, heading, copy]) => (
-            <article class="process-step reveal">
-              <span>{number}</span>
-              <div><h3>{heading}</h3><p>{copy}</p></div>
-            </article>
-          ))}
+          <span class="section-label">Estructuras Jiménez</span>
+          <p class="brand-statement">Fabricación de implementos y equipamiento para el sector porcícola.</p>
         </div>
       </div>
     </section>
@@ -306,64 +221,27 @@ const year = new Date().getFullYear();
         <div class="about-visual reveal" aria-hidden="true">
           <div class="about-grid"></div>
           <div class="about-pig">EJ</div>
-          <span>ESTRUCTURAS<br />JIMÉNEZ</span>
+          <span>TEPATITLÁN<br />JALISCO</span>
         </div>
         <div class="about-copy reveal">
-          <span class="section-label">Estructuras Jiménez</span>
-          <h2>Fabricación industrial con atención cercana.</h2>
+          <span class="section-label">Nosotros</span>
+          <h2>Estructuras Jiménez.</h2>
           <p>
-            Somos una empresa de Tepatitlán de Morelos dedicada a fabricar
-            infraestructura y equipamiento para el sector porcícola.
+            Empresa ubicada en Tepatitlán de Morelos, Jalisco, dedicada a la fabricación de implementos y equipamiento para el sector porcícola.
           </p>
-          <p>
-            Trabajamos con soluciones para distintas etapas de producción y con
-            proyectos especiales cuando la operación necesita algo específico.
-          </p>
-          <div class="about-values">
-            <span>Acero</span><span>Precisión</span><span>Funcionalidad</span><span>Servicio</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq-section" id="preguntas">
-      <div class="container faq-layout">
-        <div class="faq-intro reveal">
-          <span class="section-label">Antes de cotizar</span>
-          <h2>Lo necesario para empezar.</h2>
-          <p>No necesitas llegar con un proyecto totalmente definido. Podemos comenzar con la necesidad y la información que ya tengas.</p>
-        </div>
-
-        <div class="faq-list reveal">
-          <details open>
-            <summary>¿Necesito tener planos o medidas exactas?</summary>
-            <p>No. Las medidas aproximadas y una explicación del uso ayudan a iniciar. Si ya cuentas con plano, croquis o especificaciones, servirán para revisar el proyecto con mayor precisión.</p>
-          </details>
-          <details>
-            <summary>¿Pueden fabricar algo que no aparece en la lista?</summary>
-            <p>Sí. Los proyectos especiales se revisan caso por caso para entender la necesidad, dimensiones, cantidad y condiciones de uso.</p>
-          </details>
-          <details>
-            <summary>¿Qué información ayuda a obtener una mejor cotización?</summary>
-            <p>Tipo de estructura o equipo, cantidad, medidas aproximadas, ubicación del proyecto y una breve descripción de cómo se utilizará.</p>
-          </details>
-          <details>
-            <summary>¿Dónde se encuentra Estructuras Jiménez?</summary>
-            <p>Atendemos desde Tepatitlán de Morelos, Jalisco. Puedes iniciar tu solicitud desde esta página o llamar directamente a oficina.</p>
-          </details>
         </div>
       </div>
     </section>
 
     <section id="cotizar" class="section quote-section">
       <div class="container quote-layout">
-        <div class="quote-intro reveal">
-          <span class="section-label light">Cotizaciones</span>
-          <h2>Cuéntanos qué necesitas fabricar.</h2>
+        <div class="quote-intro reveal" id="contacto">
+          <span class="section-label light">Cotización</span>
+          <h2>Cuéntanos qué necesitas.</h2>
           <p>
-            No necesitas tener toda la información técnica. Compártenos lo que ya sabes
-            y prepararemos la solicitud para darle seguimiento.
+            Completa los datos disponibles para preparar tu solicitud de cotización.
           </p>
+
           <div class="quote-contact">
             <a href="tel:+523781214083"><small>Teléfono de oficina</small><strong>378 121 4083</strong><em aria-hidden="true">↗</em></a>
             <a href="mailto:gusestructuras23@gmail.com"><small>Correo</small><strong>gusestructuras23@gmail.com</strong><em aria-hidden="true">↗</em></a>
@@ -373,21 +251,21 @@ const year = new Date().getFullYear();
 
         <form class="quote-form reveal" id="quote-form">
           <div class="form-head">
-            <span>Solicitud de proyecto</span>
-            <small>Campos marcados con * son necesarios</small>
+            <span>Solicitud de cotización</span>
+            <small>* Información necesaria</small>
           </div>
 
           <div class="form-grid">
             <label>
               <span>Nombre o empresa *</span>
-              <input name="name" autocomplete="name" required placeholder="Ej. Granja San José" />
+              <input name="name" autocomplete="name" required placeholder="Nombre o empresa" />
             </label>
             <label>
               <span>Teléfono *</span>
               <input name="phone" autocomplete="tel" required inputmode="tel" placeholder="378 000 0000" />
             </label>
             <label>
-              <span>¿Qué necesitas? *</span>
+              <span>Producto *</span>
               <select name="service" required>
                 <option value="">Selecciona una opción</option>
                 {products.map((product) => <option value={product.title}>{product.title}</option>)}
@@ -398,28 +276,28 @@ const year = new Date().getFullYear();
               <input name="location" placeholder="Municipio / Estado" />
             </label>
             <label>
-              <span>Medidas aproximadas</span>
-              <input name="dimensions" placeholder="Ej. 12 × 30 m" />
+              <span>Cantidad o medidas</span>
+              <input name="dimensions" placeholder="Dato aproximado" />
             </label>
             <label>
               <span>Correo</span>
               <input name="email" autocomplete="email" type="email" placeholder="correo@empresa.com" />
             </label>
             <label class="form-full">
-              <span>Cuéntanos sobre el proyecto *</span>
-              <textarea name="details" required rows="5" placeholder="Describe qué necesitas fabricar, cantidad, uso o cualquier dato que ya tengas."></textarea>
+              <span>Información adicional</span>
+              <textarea name="details" rows="5" placeholder="Agrega cualquier dato que quieras incluir en la solicitud."></textarea>
             </label>
           </div>
 
           <label class="consent">
             <input type="checkbox" required />
-            <span>Acepto que Estructuras Jiménez utilice estos datos únicamente para atender mi solicitud.</span>
+            <span>Acepto que Estructuras Jiménez utilice estos datos para atender mi solicitud.</span>
           </label>
 
           <div class="form-actions">
             <button class="button button-light-pink" type="submit">Preparar solicitud <span aria-hidden="true">↗</span></button>
             <button class="button button-copy" type="button" id="copy-quote">Copiar resumen</button>
-            <p id="quote-status" aria-live="polite">Puedes enviarla por correo o copiar el resumen para compartirlo por el medio que prefieras.</p>
+            <p id="quote-status" aria-live="polite">Puedes enviarla por correo o copiar el resumen.</p>
           </div>
         </form>
       </div>
@@ -427,14 +305,7 @@ const year = new Date().getFullYear();
 
     <section id="privacidad" class="privacy-section">
       <div class="container privacy-row">
-        <details>
-          <summary>Aviso de privacidad</summary>
-          <div class="privacy-copy">
-            <p>Estructuras Jiménez es responsable del tratamiento de los datos personales proporcionados de manera voluntaria para atender solicitudes de información, contacto y cotización.</p>
-            <p>Los datos se utilizarán únicamente para dar seguimiento a la solicitud relacionada con nuestros productos y servicios. Para consultas de privacidad puedes escribir a <a href="mailto:gusestructuras23@gmail.com">gusestructuras23@gmail.com</a>.</p>
-            <p><a href="/aviso-de-privacidad">Consultar aviso de privacidad completo →</a></p>
-          </div>
-        </details>
+        <a href="/aviso-de-privacidad">Aviso de privacidad →</a>
         <a href="#inicio">Volver al inicio ↑</a>
       </div>
     </section>
@@ -442,29 +313,48 @@ const year = new Date().getFullYear();
 
   <div class="mobile-quick-actions" aria-label="Acciones rápidas">
     <a href="tel:+523781214083">Llamar</a>
-    <a href="#cotizar">Cotizar proyecto</a>
+    <a href="#cotizar">Cotizar</a>
   </div>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="/brand/estructuras-jimenez.svg" alt="Estructuras Jiménez" width="150" height="115" />
-        <p>Infraestructura y equipamiento para el sector porcícola.</p>
+        <p>Implementos y equipamiento para el sector porcícola.</p>
       </div>
-      <div><span>Navegación</span><a href="#soluciones">Soluciones</a><a href="#proceso">Proceso</a><a href="#cotizar">Cotizar</a><a href="/aviso-de-privacidad">Privacidad</a></div>
-      <div><span>Contacto</span><a href="tel:+523781214083">378 121 4083</a><a href="mailto:gusestructuras23@gmail.com">Correo</a><a href="https://www.google.com/maps/search/?api=1&query=Periferico+Salvador+Zuniga+1871,+Tepatitlan+de+Morelos,+Jalisco" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a><small>Tepatitlán de Morelos, Jalisco</small></div>
-      <div class="footer-signature"><strong>© {year}</strong><span>Estructuras Jiménez</span></div>
+
+      <div>
+        <span>Navegación</span>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#cotizar">Cotizar</a>
+      </div>
+
+      <div>
+        <span>Contacto</span>
+        <a href="tel:+523781214083">378 121 4083</a>
+        <a href="mailto:gusestructuras23@gmail.com">Correo</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Periferico+Salvador+Zuniga+1871,+Tepatitlan+de+Morelos,+Jalisco" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a>
+        <small>Tepatitlán de Morelos, Jalisco</small>
+      </div>
+
+      <div class="footer-signature">
+        <strong>© {year}</strong>
+        <span>Estructuras Jiménez</span>
+      </div>
     </div>
   </footer>
 
   <script is:inline>
     const menuButton = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
+
     menuButton?.addEventListener('click', () => {
       const open = menuButton.getAttribute('aria-expanded') === 'true';
       menuButton.setAttribute('aria-expanded', String(!open));
       nav?.classList.toggle('open');
     });
+
     document.querySelectorAll('.main-nav a').forEach((link) => link.addEventListener('click', () => {
       menuButton?.setAttribute('aria-expanded', 'false');
       nav?.classList.remove('open');
@@ -478,12 +368,13 @@ const year = new Date().getFullYear();
     });
 
     const zoneNames = {
-      infraestructura: 'Infraestructura',
-      maternidad: 'Maternidad y destete',
-      gestacion: 'Gestación',
-      alimentacion: 'Alimentación',
-      almacenamiento: 'Almacenamiento'
+      casetas: 'Casetas y bodegas',
+      camas: 'Camas de maternidad y destete',
+      jaulas: 'Jaulas porcícolas',
+      comederos: 'Comederos',
+      tolvas: 'Tolvas para granos'
     };
+
     const setBlueprintZone = (zone) => {
       document.querySelectorAll('.blueprint-item').forEach((item) => {
         item.classList.toggle('is-active', item.getAttribute('data-zone') === zone);
@@ -492,8 +383,9 @@ const year = new Date().getFullYear();
         shape.classList.toggle('is-active', shape.getAttribute('data-zone-shape') === zone);
       });
       const readout = document.querySelector('[data-blueprint-name]');
-      if (readout) readout.textContent = zoneNames[zone] || 'Solución';
+      if (readout) readout.textContent = zoneNames[zone] || 'Producto';
     };
+
     document.querySelectorAll('.blueprint-item').forEach((item) => {
       const zone = item.getAttribute('data-zone');
       if (!zone) return;
@@ -508,12 +400,12 @@ const year = new Date().getFullYear();
       'Nombre / empresa: ' + (data.get('name') || ''),
       'Teléfono: ' + (data.get('phone') || ''),
       'Correo: ' + (data.get('email') || 'No indicado'),
-      'Proyecto: ' + (data.get('service') || ''),
+      'Producto: ' + (data.get('service') || ''),
       'Ubicación: ' + (data.get('location') || 'No indicada'),
-      'Medidas aproximadas: ' + (data.get('dimensions') || 'No indicadas'),
+      'Cantidad o medidas: ' + (data.get('dimensions') || 'No indicadas'),
       '',
-      'Detalles:',
-      String(data.get('details') || '')
+      'Información adicional:',
+      String(data.get('details') || 'Sin información adicional')
     ].join('\n');
 
     const copyButton = document.querySelector('#copy-quote');
@@ -524,9 +416,9 @@ const year = new Date().getFullYear();
       const status = document.querySelector('#quote-status');
       try {
         await navigator.clipboard.writeText(summary);
-        if (status) status.textContent = 'Resumen copiado. Ya puedes pegarlo en WhatsApp, correo o mensaje.';
+        if (status) status.textContent = 'Resumen copiado.';
       } catch {
-        if (status) status.textContent = 'No se pudo copiar automáticamente. Puedes seleccionar y copiar los datos del formulario.';
+        if (status) status.textContent = 'No se pudo copiar automáticamente.';
       }
     });
 
@@ -538,6 +430,7 @@ const year = new Date().getFullYear();
         }
       });
     }, { threshold: 0.12 });
+
     document.querySelectorAll('.reveal').forEach((item) => revealObserver.observe(item));
 
     const form = document.querySelector('#quote-form');
@@ -545,11 +438,11 @@ const year = new Date().getFullYear();
       event.preventDefault();
       if (!(form instanceof HTMLFormElement)) return;
       const data = new FormData(form);
-      const subject = 'Solicitud de cotización - ' + (data.get('service') || 'Proyecto');
+      const subject = 'Solicitud de cotización - ' + (data.get('service') || 'Estructuras Jiménez');
       const body = buildQuoteBody(data);
       window.location.href = 'mailto:gusestructuras23@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       const status = document.querySelector('#quote-status');
-      if (status) status.textContent = 'Solicitud preparada. Si no se abrió tu correo, puedes llamarnos al 378 121 4083.';
+      if (status) status.textContent = 'Solicitud preparada.';
     });
   </script>
 </BaseLayout>
