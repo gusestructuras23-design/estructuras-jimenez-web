@@ -2,7 +2,7 @@
 
 Sitio web oficial de Estructuras Jiménez.
 
-Fabricación de implementos y equipamiento para el sector porcícola.
+Fabricación de estructuras metálicas y equipamiento, con experiencia en el sector porcino.
 
 Ubicación: Tepatitlán de Morelos, Jalisco, México
 Teléfono: 378 121 4083

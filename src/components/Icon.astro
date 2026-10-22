@@ -1,0 +1,12 @@
+---
+interface Props { name: string; }
+const { name } = Astro.props;
+const paths: Record<string, string[]> = {
+  arrow: ['M5 12h14', 'm13 6 6 6-6 6'], down: ['M12 5v14', 'm6 13 6 6 6-6'],
+  phone: ['M8 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-4l-5-2-2 2a14 14 0 0 1-6-6l2-2Z'],
+  mail: ['M3 5h18v14H3Z', 'm3 6 9 7 9-7'], pin: ['M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z', 'M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6'],
+  copy: ['M9 9h12v12H9Z', 'M5 15H3V3h12v2'], structure: ['M3 21V8l9-5 9 5v13', 'm3 8 9 5 9-5', 'M12 13v8', 'M6 21h12'],
+  equipment: ['M3 5h18v16H3Z', 'M3 11h18', 'M8 5v16', 'M16 5v16', 'M3 17h18'], storage: ['M5 3h14v9l-5 6h-4l-5-6Z', 'M5 8h14', 'M10 18v3', 'M14 18v3']
+};
+---
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24" height="24">{(paths[name] || paths.arrow).map((d) => <path d={d} />)}</svg>

@@ -1,0 +1,34 @@
+---
+const frames = [0, 1, 2, 3, 4];
+---
+<svg class="structure-illustration" viewBox="0 0 640 460" fill="none" aria-hidden="true">
+  <defs>
+    <pattern id="plan-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#DADDDD" stroke-width=".7" /></pattern>
+    <linearGradient id="roof-face" x1="200" y1="70" x2="520" y2="250" gradientUnits="userSpaceOnUse"><stop stop-color="#F5C7CB" /><stop offset="1" stop-color="#E5A0A8" /></linearGradient>
+    <linearGradient id="slab-face" x1="130" y1="230" x2="450" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#E7E9E7" /><stop offset="1" stop-color="#D3D8D5" /></linearGradient>
+  </defs>
+  <path fill="url(#plan-grid)" opacity=".58" d="M0 0h640v460H0z" />
+  <ellipse cx="330" cy="361" rx="231" ry="39" fill="#303637" opacity=".07" />
+  <path d="m66 305 318 113 213-112-318-111Z" fill="url(#slab-face)" />
+  <path d="m66 305 318 113v9L66 314Z" fill="#C8CECB" /><path d="m384 418 213-112v9L384 427Z" fill="#B8C0BC" />
+  <g stroke="#909995" stroke-width="1" opacity=".32"><path d="m104 285 318 113M146 263l318 113M188 241l318 113M230 219l318 113M135 330l211-111M216 359l211-111M297 388l211-111" /></g>
+  <path d="m111 174 103-90 315 110-103 89Z" fill="#F7DFDF" />
+  <path d="m214 84 90 24 316 110-91-24Z" fill="url(#roof-face)" /><path d="m111 174 315 109 103-89L214 84Z" fill="url(#roof-face)" />
+  <g stroke="#B56E7A" opacity=".42" stroke-width="1"><path d="m131 157 315 110m-294-128 315 110m-294-128 315 110m-294-128 315 110" /></g>
+  <path d="m214 84 315 110 91 24" stroke="#F8E8E6" stroke-width="4" stroke-linejoin="round" /><path d="m111 174 315 109 103-89 91 24" stroke="#C57F88" stroke-width="5" stroke-linejoin="round" />
+  <g stroke-linejoin="round" stroke-linecap="square">
+    {frames.map((i) => {
+      const x = 113 + i * 76, y = 177 + i * 26.5;
+      return <g>
+        <path d={`M${x} ${y + 126}V${y}l103-86 86 28v126`} stroke="#303638" stroke-width="7" />
+        <path d={`M${x + 4} ${y + 122}V${y + 3}l100-85 81 27`} stroke="#7A8281" stroke-width="2" />
+        <path d={`M${x} ${y}l189-58M${x + 51} ${y - 43}l43 14 9-57 40 42 1-31`} stroke="#535D5B" stroke-width="2.4" />
+        <path d={`M${x - 9} ${y + 127}l15 5 10-5-15-5ZM${x + 180} ${y + 68}l15 5 10-5-15-5Z`} fill="#535D5B" stroke="#535D5B" stroke-width="1" />
+      </g>;
+    })}
+    <path d="m113 177 304 106m-304 20 304 106M302 119l304 106M302 245l304 106" stroke="#535D5B" stroke-width="3" />
+    <path d="m113 303 76-99m-76-27 76 152M417 409l76-145m-76 19 76 86M493 369l76-79m-76-26 76 60" stroke="#7A8281" stroke-width="2" />
+  </g>
+  <path d="m89 333 296 104m-296-110v13m296 90v14M412 437l178-95m-182 90 7 12m171-108 7 12" stroke="#969D99" stroke-width="1" />
+  <g fill="#ECADB4"><circle cx="89" cy="333" r="3" /><circle cx="385" cy="437" r="3" /><circle cx="590" cy="342" r="3" /></g>
+</svg>
