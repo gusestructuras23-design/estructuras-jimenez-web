@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+
+const title = 'Aviso de privacidad | Estructuras Jiménez';
+const description = 'Aviso de privacidad de Estructuras Jiménez para datos de contacto y solicitudes de cotización.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="legal-page">
+    <div class="container legal-shell">
+      <a class="legal-back" href="/">← Volver a Estructuras Jiménez</a>
+      <div class="legal-heading">
+        <span class="section-label">Privacidad</span>
+        <h1>Aviso de privacidad</h1>
+        <p>Última actualización: octubre de 2026.</p>
+      </div>
+
+      <article class="legal-content">
+        <section>
+          <h2>Responsable</h2>
+          <p><strong>Estructuras Jiménez</strong>, responsable Gustavo Jiménez Esquivias, con domicilio en Tepatitlán de Morelos, Jalisco, México, es responsable del tratamiento de los datos personales proporcionados de manera voluntaria a través de sus medios de contacto.</p>
+        </section>
+
+        <section>
+          <h2>Datos y finalidades</h2>
+          <p>Podemos recibir datos de identificación y contacto, así como información relacionada con el proyecto que deseas cotizar. Estos datos se utilizan para responder solicitudes, preparar cotizaciones, dar seguimiento comercial y mantener comunicación relacionada con los productos o servicios solicitados.</p>
+        </section>
+
+        <section>
+          <h2>Datos técnicos del sitio</h2>
+          <p>El proveedor de alojamiento puede procesar datos técnicos necesarios para operación, seguridad y prevención de abuso, como dirección IP, tipo de navegador y registros de acceso.</p>
+        </section>
+
+        <section>
+          <h2>Transferencias</h2>
+          <p>No vendemos datos personales. La información puede ser procesada por proveedores tecnológicos estrictamente necesarios para operar el sitio y atender las comunicaciones.</p>
+        </section>
+
+        <section>
+          <h2>Derechos y contacto</h2>
+          <p>Para consultas, acceso, rectificación, cancelación u oposición relacionadas con tus datos personales, puedes escribir a <a href="mailto:gusestructuras23@gmail.com">gusestructuras23@gmail.com</a>.</p>
+        </section>
+
+        <section>
+          <h2>Cambios al aviso</h2>
+          <p>Las actualizaciones a este aviso se publicarán en esta misma página.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
