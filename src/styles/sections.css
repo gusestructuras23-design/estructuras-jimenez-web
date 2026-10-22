@@ -345,7 +345,7 @@
 .about-visual img {
   position: relative;
   z-index: 2;
-  width: min(420px,82%);
+  width: min(390px,78%);
   padding: 18px;
   border-radius: 24px;
   background: #fff;
@@ -574,7 +574,7 @@
   align-items: start;
 }
 .footer-brand img {
-  width: 168px;
+  width: 154px;
   padding: 10px 12px;
   border-radius: 16px;
   background: #fff;
