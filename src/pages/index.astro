@@ -180,6 +180,96 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
+
+    <section class="section blueprint-section" id="plano">
+      <div class="container blueprint-layout">
+        <div class="blueprint-copy reveal">
+          <span class="section-label">Mapa de soluciones</span>
+          <h2>Una granja. Distintas necesidades.</h2>
+          <p>
+            Explora el esquema para ver dónde puede intervenir cada tipo de solución.
+            No es un catálogo cerrado: sirve como punto de partida para definir tu proyecto.
+          </p>
+
+          <div class="blueprint-list" role="list">
+            <button class="blueprint-item is-active" type="button" data-zone="infraestructura">
+              <span>01</span><strong>Infraestructura</strong><small>Casetas, bodegas y estructura general</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="maternidad">
+              <span>02</span><strong>Maternidad y destete</strong><small>Camas y áreas de manejo</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="gestacion">
+              <span>03</span><strong>Gestación</strong><small>Jaulas y organización de corrales</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="alimentacion">
+              <span>04</span><strong>Alimentación</strong><small>Comederos y puntos de servicio</small>
+            </button>
+            <button class="blueprint-item" type="button" data-zone="almacenamiento">
+              <span>05</span><strong>Almacenamiento</strong><small>Tolvas y manejo de grano</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="blueprint-visual reveal" data-blueprint>
+          <div class="blueprint-title">
+            <span>Esquema conceptual</span>
+            <strong>Estructuras Jiménez</strong>
+          </div>
+
+          <svg viewBox="0 0 760 520" role="img" aria-label="Plano conceptual de una instalación porcícola">
+            <defs>
+              <pattern id="grid-small" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M24 0H0V24" fill="none" stroke="currentColor" stroke-width="0.55" opacity=".15" />
+              </pattern>
+            </defs>
+
+            <rect width="760" height="520" fill="url(#grid-small)" rx="18" />
+
+            <g class="bp-base" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M98 104 330 38l310 86v290H98Z" />
+              <path d="M98 104 330 168l310-44M330 38v376" />
+              <path d="M98 414h542" />
+              <path d="M128 155h182v106H128ZM128 286h182v96H128Z" />
+              <path d="M354 174h112v208H354ZM486 151h124v100H486ZM486 278h124v104H486Z" />
+              <path d="M147 177h145M147 199h145M147 221h145" />
+              <path d="M147 309h145M147 333h145M147 357h145" />
+              <path d="M377 195h66M377 222h66M377 249h66M377 276h66M377 303h66M377 330h66" />
+            </g>
+
+            <g class="bp-zone is-active" data-zone-shape="infraestructura">
+              <path d="M98 104 330 38l310 86v290H98Z" />
+            </g>
+            <g class="bp-zone" data-zone-shape="maternidad">
+              <rect x="128" y="155" width="182" height="106" rx="6" />
+            </g>
+            <g class="bp-zone" data-zone-shape="gestacion">
+              <rect x="354" y="174" width="112" height="208" rx="6" />
+            </g>
+            <g class="bp-zone" data-zone-shape="alimentacion">
+              <rect x="128" y="286" width="182" height="96" rx="6" />
+            </g>
+            <g class="bp-zone" data-zone-shape="almacenamiento">
+              <rect x="486" y="151" width="124" height="100" rx="6" />
+              <path d="M515 165h66l-12 67h-42Z" />
+            </g>
+
+            <g class="bp-labels" fill="currentColor">
+              <text x="145" y="149">MATERNIDAD / DESTETE</text>
+              <text x="366" y="164">GESTACIÓN</text>
+              <text x="145" y="280">ALIMENTACIÓN</text>
+              <text x="494" y="142">TOLVAS / GRANO</text>
+              <text x="494" y="271">ÁREA FLEXIBLE</text>
+            </g>
+          </svg>
+
+          <div class="blueprint-readout">
+            <span>Zona seleccionada</span>
+            <strong data-blueprint-name>Infraestructura</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="statement-section">
       <div class="container statement-grid">
         <div class="statement-number reveal">EJ<span>·</span>MX</div>
@@ -297,7 +387,8 @@ const year = new Date().getFullYear();
 
           <div class="form-actions">
             <button class="button button-light-pink" type="submit">Preparar solicitud <span aria-hidden="true">↗</span></button>
-            <p id="quote-status" aria-live="polite">Al continuar se abrirá tu aplicación de correo con la información preparada.</p>
+            <button class="button button-copy" type="button" id="copy-quote">Copiar resumen</button>
+            <p id="quote-status" aria-live="polite">Puedes enviarla por correo o copiar el resumen para compartirlo por el medio que prefieras.</p>
           </div>
         </form>
       </div>
@@ -316,6 +407,11 @@ const year = new Date().getFullYear();
       </div>
     </section>
   </main>
+
+  <div class="mobile-quick-actions" aria-label="Acciones rápidas">
+    <a href="tel:+523781214083">Llamar</a>
+    <a href="#cotizar">Cotizar proyecto</a>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-grid">
@@ -349,6 +445,59 @@ const year = new Date().getFullYear();
       });
     });
 
+    const zoneNames = {
+      infraestructura: 'Infraestructura',
+      maternidad: 'Maternidad y destete',
+      gestacion: 'Gestación',
+      alimentacion: 'Alimentación',
+      almacenamiento: 'Almacenamiento'
+    };
+    const setBlueprintZone = (zone) => {
+      document.querySelectorAll('.blueprint-item').forEach((item) => {
+        item.classList.toggle('is-active', item.getAttribute('data-zone') === zone);
+      });
+      document.querySelectorAll('[data-zone-shape]').forEach((shape) => {
+        shape.classList.toggle('is-active', shape.getAttribute('data-zone-shape') === zone);
+      });
+      const readout = document.querySelector('[data-blueprint-name]');
+      if (readout) readout.textContent = zoneNames[zone] || 'Solución';
+    };
+    document.querySelectorAll('.blueprint-item').forEach((item) => {
+      const zone = item.getAttribute('data-zone');
+      if (!zone) return;
+      item.addEventListener('mouseenter', () => setBlueprintZone(zone));
+      item.addEventListener('focus', () => setBlueprintZone(zone));
+      item.addEventListener('click', () => setBlueprintZone(zone));
+    });
+
+    const buildQuoteBody = (data) => [
+      'SOLICITUD DE COTIZACIÓN - ESTRUCTURAS JIMÉNEZ',
+      '',
+      'Nombre / empresa: ' + (data.get('name') || ''),
+      'Teléfono: ' + (data.get('phone') || ''),
+      'Correo: ' + (data.get('email') || 'No indicado'),
+      'Proyecto: ' + (data.get('service') || ''),
+      'Ubicación: ' + (data.get('location') || 'No indicada'),
+      'Medidas aproximadas: ' + (data.get('dimensions') || 'No indicadas'),
+      '',
+      'Detalles:',
+      String(data.get('details') || '')
+    ].join('\n');
+
+    const copyButton = document.querySelector('#copy-quote');
+    copyButton?.addEventListener('click', async () => {
+      const quoteForm = document.querySelector('#quote-form');
+      if (!(quoteForm instanceof HTMLFormElement)) return;
+      const summary = buildQuoteBody(new FormData(quoteForm));
+      const status = document.querySelector('#quote-status');
+      try {
+        await navigator.clipboard.writeText(summary);
+        if (status) status.textContent = 'Resumen copiado. Ya puedes pegarlo en WhatsApp, correo o mensaje.';
+      } catch {
+        if (status) status.textContent = 'No se pudo copiar automáticamente. Puedes seleccionar y copiar los datos del formulario.';
+      }
+    });
+
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -365,19 +514,7 @@ const year = new Date().getFullYear();
       if (!(form instanceof HTMLFormElement)) return;
       const data = new FormData(form);
       const subject = 'Solicitud de cotización - ' + (data.get('service') || 'Proyecto');
-      const body = [
-        'SOLICITUD DE COTIZACIÓN - ESTRUCTURAS JIMÉNEZ',
-        '',
-        'Nombre / empresa: ' + (data.get('name') || ''),
-        'Teléfono: ' + (data.get('phone') || ''),
-        'Correo: ' + (data.get('email') || 'No indicado'),
-        'Proyecto: ' + (data.get('service') || ''),
-        'Ubicación: ' + (data.get('location') || 'No indicada'),
-        'Medidas aproximadas: ' + (data.get('dimensions') || 'No indicadas'),
-        '',
-        'Detalles:',
-        String(data.get('details') || '')
-      ].join('\n');
+      const body = buildQuoteBody(data);
       window.location.href = 'mailto:gusestructuras23@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       const status = document.querySelector('#quote-status');
       if (status) status.textContent = 'Solicitud preparada. Si no se abrió tu correo, puedes llamarnos al 378 121 4083.';
