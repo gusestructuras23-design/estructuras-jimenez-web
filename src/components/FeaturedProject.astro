@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section id="proyecto-destacado" class="featured-project" aria-labelledby="featured-project-title">
+  <div class="shell">
+    <div class="featured-project-heading">
+      <div class="featured-project-copy">
+        <span class="section-label">Trabajo realizado</span>
+        <h2 id="featured-project-title">Jaulas porcícolas</h2>
+        <p>Conoce uno de nuestros trabajos de fabricación metálica para el sector porcino: detalles del proceso en taller y el resultado final.</p>
+      </div>
+      <a class="button button-primary featured-project-action" href="#cotizar" data-service="Jaulas porcícolas">
+        Cotizar un proyecto <Icon name="arrow" />
+      </a>
+    </div>
+
+    <div class="featured-project-gallery" aria-label="Fotografías del proyecto Jaulas porcícolas">
+      <figure class="featured-project-photo featured-project-photo-main">
+        <img
+          src="/proyectos/jaulas-porcicolas/jaula-porcicola-03-exterior.webp"
+          srcset="/proyectos/jaulas-porcicolas/jaula-porcicola-03-exterior-640.webp 640w, /proyectos/jaulas-porcicolas/jaula-porcicola-03-exterior-960.webp 960w, /proyectos/jaulas-porcicolas/jaula-porcicola-03-exterior.webp 1280w"
+          sizes="(max-width: 760px) 100vw, (max-width: 1100px) 62vw, 760px"
+          width="1280" height="960" loading="lazy" decoding="async"
+          alt="Jaula porcícola metálica de gran formato terminada, vista exterior junto a un tractocamión"
+        />
+        <figcaption>Vista exterior del trabajo terminado</figcaption>
+      </figure>
+      <figure class="featured-project-photo featured-project-photo-secondary">
+        <img
+          src="/proyectos/jaulas-porcicolas/jaula-porcicola-01-taller-negra.webp"
+          srcset="/proyectos/jaulas-porcicolas/jaula-porcicola-01-taller-negra-640.webp 640w, /proyectos/jaulas-porcicolas/jaula-porcicola-01-taller-negra-960.webp 960w, /proyectos/jaulas-porcicolas/jaula-porcicola-01-taller-negra.webp 1280w"
+          sizes="(max-width: 760px) 48vw, 360px"
+          width="1280" height="960" loading="lazy" decoding="async"
+          alt="Jaula porcícola negra de estructura metálica y laterales de rejilla en el taller de Estructuras Jiménez"
+        />
+        <figcaption>Fabricación en taller</figcaption>
+      </figure>
+      <figure class="featured-project-photo featured-project-photo-secondary">
+        <img
+          src="/proyectos/jaulas-porcicolas/jaula-porcicola-02-taller-gris.webp"
+          srcset="/proyectos/jaulas-porcicolas/jaula-porcicola-02-taller-gris-640.webp 640w, /proyectos/jaulas-porcicolas/jaula-porcicola-02-taller-gris-960.webp 960w, /proyectos/jaulas-porcicolas/jaula-porcicola-02-taller-gris.webp 1200w"
+          sizes="(max-width: 760px) 48vw, 360px"
+          width="1200" height="1600" loading="lazy" decoding="async"
+          alt="Detalle de una jaula porcícola gris de estructura metálica durante su fabricación en taller"
+        />
+        <figcaption>Detalle de la estructura</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
