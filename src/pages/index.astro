@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StructureIllustration from '../components/StructureIllustration.astro';
 import Icon from '../components/Icon.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
 import '../styles/global.css';
 
 const title = 'Estructuras Jiménez | Estructuras metálicas y equipamiento';
@@ -75,6 +76,8 @@ const structuredData = {
         <p class="products-note">¿Tienes un proyecto diferente? <a href="#cotizar" data-service="Otro proyecto">Cuéntanos qué necesitas <span aria-hidden="true">↗</span></a></p>
       </div>
     </section>
+
+    <FeaturedProject />
 
     <section id="nosotros" class="about-section" aria-labelledby="about-title">
       <div class="shell about-layout">
