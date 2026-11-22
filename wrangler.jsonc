@@ -3,6 +3,8 @@
   "name": "estructuras-jimenez-web",
   "compatibility_date": "2026-09-14",
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+    "run_worker_first": true
+  },
+  "main": "./worker/maintenance.js"
 }
