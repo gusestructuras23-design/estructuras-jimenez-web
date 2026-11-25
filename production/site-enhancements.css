@@ -1,0 +1,18 @@
+/* Keep the existing Akari layout. Only adjust the requested controls. */
+#quote-form label:has([name="location"]){display:none!important}
+#quote-form label:has([name="email"]){grid-column:1 / -1}
+#quote-form [type="submit"]:disabled{opacity:.65;cursor:wait}
+#quote-status[data-state="error"]{color:#a52626;font-weight:600}
+#quote-status[data-state="success"]{color:#23613b;font-weight:600}
+/* Separate corner controls and keep the form and keyboard unobstructed. */
+.office-whatsapp{bottom:calc(20px + env(safe-area-inset-bottom,0px))!important;left:22px!important;right:auto!important}
+.ej-mobile-utility{position:fixed!important;display:flex!important;align-items:center;justify-content:center;min-width:76px;min-height:52px;bottom:calc(20px + env(safe-area-inset-bottom,0px))!important;right:22px!important;left:auto!important}
+html.ej-mobile-editing :is(.office-whatsapp,.ej-mobile-utility),html.ej-gallery-open :is(.office-whatsapp,.ej-mobile-utility){opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+body.ej-brand-theme .mobile-quick-actions{display:none!important}
+@media(max-width:760px){
+ .office-whatsapp{left:18px!important;right:auto!important}
+ .ej-mobile-utility{right:18px!important;left:auto!important}
+ .ej-mobile-dock{display:none!important}
+ body.ej-brand-theme:has(#quote-form:focus-within) :is(.office-whatsapp,.ej-mobile-utility){opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+}
+.ej-progress-hidden,.ej-scroll-percentage{display:none!important}
