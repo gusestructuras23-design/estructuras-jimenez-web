@@ -1,10 +1,10 @@
 {
-  "public_version": "39c8e004-5bf2-4dad-a2be-a525ff17c956",
+  "public_version": "b679eb5d-e3bc-4b38-99bf-867247efdb6c",
   "changes": [
     "Pie en dos bloques alineados: marca a la izquierda y contacto a la derecha; distribución apilada en móvil",
     "Botón Desarrollado por IPService con enlace https://wa.me/5215644361349",
     "Accesos flotantes de WhatsApp y puerquito conservados",
-    "Juego recuperado aunque falte el contenedor antiguo en la base"
+    "Inicio Akari original y siete recursos recuperados e incluidos en módulo independiente"
   ],
-  "verification": "Chromium local 1366/768/390/320: complete game build and welcome-home phase, floating controls and footer; 21 published modules verified byte for byte. Base version restored via API; live domain visual verification blocked by environment."
+  "verification": "LIVE Chromium: original Akari visible, complete game builds three pieces and welcomes pigs; 390px no overflow. 22 published modules verified byte for byte."
 }

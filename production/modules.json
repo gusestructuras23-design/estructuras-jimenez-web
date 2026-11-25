@@ -82,5 +82,9 @@
   {
     "name": "project-video.bin",
     "type": "text/plain"
+  },
+  {
+    "name": "native-akari.mjs",
+    "type": "ESModule"
   }
 ]

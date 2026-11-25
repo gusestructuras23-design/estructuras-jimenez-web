@@ -1,3 +1,4 @@
+import {nativeHTML,nativeAssets} from './native-akari.mjs';
 import { privacyContent, privacyDescription } from './privacy-page.mjs';
 import { projectSection, projectStyles, projects, renderCatalogue, renderProject } from './project-section.mjs';
 import { serveProjectMedia } from './project-media.mjs';
@@ -74,7 +75,9 @@ export default {
     if (media) return media;
     const projectPage = serveProjectPage(request);
     if (projectPage) return projectPage;
-    const response = await env.ASSETS.fetch(request);
+    const asset=nativeAssets[new URL(request.url).pathname];
+    if(asset)return new Response(Uint8Array.from(atob(asset.data),c=>c.charCodeAt(0)),{headers:{'content-type':asset.type,'cache-control':'public,max-age=86400'}});
+    const response = new URL(request.url).pathname==='/' ? new Response(nativeHTML,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-cache'}}) : await env.ASSETS.fetch(request);
     if (request.method !== 'GET' || !response.headers.get('content-type')?.includes('text/html') || response.status !== 200) return response;
     const aboutCopy = 'Fabricamos jaulas, comederos y casetas para porcinos, tolvas para granos y estructuras metálicas para bodegas y naves.';
     const rewriter = new HTMLRewriter()
