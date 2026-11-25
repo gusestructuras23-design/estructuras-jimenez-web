@@ -417,6 +417,16 @@
  const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  function themeWorkshop(){
   const candidates=[...document.querySelectorAll('section')].filter(section=>/taller\s*interactivo/.test(normalize(section.textContent||'')) && /refugio|casita/.test(normalize(section.textContent||'')));
+  // Recover the complete game even when the original base lacks its placeholder.
+  if(!candidates.length && !document.querySelector('.ej-story-workshop')){
+   const contact=document.querySelector('#quote-form')?.closest('section')||document.getElementById('cotizar');
+   const footer=document.querySelector('footer.site-footer');
+   if(!contact&&!footer)return;
+   const section=document.createElement('section');section.id='taller-interactivo';
+   section.textContent='Taller interactivo: construye su refugio';
+   if(contact)contact.after(section);else footer.before(section);
+   candidates.push(section);
+  }
   candidates.filter(section=>!candidates.some(other=>other!==section&&section.contains(other))).forEach((section,index)=>{
    if(section.dataset.simpleWorkshopReady)return;
    const contact=document.querySelector('#quote-form')?.closest('section')||document.getElementById('cotizar');
