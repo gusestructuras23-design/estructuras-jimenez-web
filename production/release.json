@@ -1,9 +1,10 @@
 {
-  "public_version": "62eca9cc-9787-457d-ad50-dd52977f23a0",
+  "public_version": "39c8e004-5bf2-4dad-a2be-a525ff17c956",
   "changes": [
     "Pie en dos bloques alineados: marca a la izquierda y contacto a la derecha; distribución apilada en móvil",
     "Botón Desarrollado por IPService con enlace https://wa.me/5215644361349",
-    "Accesos flotantes de WhatsApp y puerquito conservados"
+    "Accesos flotantes de WhatsApp y puerquito conservados",
+    "Juego recuperado aunque falte el contenedor antiguo en la base"
   ],
-  "verification": "Miniflare render and Chromium at 1366, 768, 390 and 320px: correct phone, map, developer WhatsApp and founding date; two aligned desktop blocks and stacked left-aligned mobile blocks, no horizontal overflow or overlap with floating controls; developer button target at least 44px. All 21 uploaded modules verified byte for byte; binding preserved."
+  "verification": "Chromium local 1366/768/390/320: complete game build and welcome-home phase, floating controls and footer; 21 published modules verified byte for byte. Base version restored via API; live domain visual verification blocked by environment."
 }
