@@ -1,8 +1,15 @@
 """Run with Python 3: python production/manage.py [--publish]. No third-party packages."""
 from pathlib import Path
-import json,os,urllib.request,uuid,argparse
+import json,os,urllib.request,uuid,argparse,subprocess
 root=Path(__file__).resolve().parent
 parser=argparse.ArgumentParser();parser.add_argument('--publish',action='store_true');args=parser.parse_args()
+if args.publish:
+ dirty=subprocess.check_output(['git','status','--porcelain'],cwd=root.parent,text=True).strip()
+ if dirty:raise SystemExit('PUBLICACION BLOQUEADA: guarda todos los cambios con git add y git commit; subelos a GitHub antes de publicar.')
+ required=['native-akari.mjs','native-akari/index.html','modules.json','whatsapp-worker.mjs']
+ for name in required:
+  if not (root/name).is_file():raise SystemExit('PUBLICACION BLOQUEADA: falta '+name)
+
 for source,export in [('site-enhancements.js','clientScript'),('site-enhancements.css','clientStyle'),('brand-combined.css','brandStyle')]:
  mode='w' if export=='clientScript' else 'a'
  with (root/'client-assets.mjs').open(mode) as f:f.write('export const '+export+' = '+json.dumps((root/source).read_text(),ensure_ascii=False)+';\n')
