@@ -927,7 +927,7 @@
   }
   const rose=accent&&(hue>=300||hue<10);
   const target=rose?[245,175,183]:[244,242,239];
-  const factor=Math.min(1,max/Math.max(...target));
+  const factor=rose?1:Math.min(1,max/Math.max(...target));
   return target.map(v=>Math.round(v*factor));
  }
  function recolor(value,property,thinLight){

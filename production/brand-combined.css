@@ -1138,3 +1138,10 @@ body.ej-brand-theme .ej-clean-footer .ej-footer-address{margin-top:8px}
  body.ej-brand-theme .ej-clean-footer .ej-footer-contact .ej-footer-inline{font-size:12px}
 }
 @media(max-width:360px){body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:90px minmax(0,1fr);gap:20px}body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:21px}}
+
+/* Original logo rose, without mauve shading; preserve all native scene geometry. */
+body.ej-brand-theme #brand-intro .intro-name{background:none!important;color:#f5afb7!important;-webkit-text-fill-color:#f5afb7!important}
+body.ej-brand-theme #brand-intro .intro-atmosphere{background:radial-gradient(ellipse at var(--intro-x) var(--intro-y),rgba(245,175,183,.07),transparent 65%),linear-gradient(130deg,#252627,#191c1d)!important}
+body.ej-brand-theme #brand-intro .intro-halo-rose{background:radial-gradient(rgba(245,175,183,.26) 0%,rgba(245,175,183,.1) 30%,transparent 68%)!important}
+body.ej-brand-theme #brand-intro .intro-halo-pearl{background:radial-gradient(rgba(244,242,239,.24) 0%,rgba(244,242,239,.07) 30%,transparent 65%)!important}
+body.ej-brand-theme #brand-intro .intro-halo-copper{background:radial-gradient(rgba(245,175,183,.15) 0%,rgba(245,175,183,.06) 35%,transparent 68%)!important}
