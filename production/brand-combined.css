@@ -1140,8 +1140,12 @@ body.ej-brand-theme .ej-clean-footer .ej-footer-address{margin-top:8px}
 @media(max-width:360px){body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:90px minmax(0,1fr);gap:20px}body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:21px}}
 
 /* Original logo rose, without mauve shading; preserve all native scene geometry. */
-body.ej-brand-theme #brand-intro .intro-name{background:none!important;color:#f5afb7!important;-webkit-text-fill-color:#f5afb7!important}
+body.ej-brand-theme #brand-intro .intro-name{background-image:none!important;color:#f5afb7!important;-webkit-text-fill-color:#f5afb7!important}
 body.ej-brand-theme #brand-intro .intro-atmosphere{background:radial-gradient(ellipse at var(--intro-x) var(--intro-y),rgba(245,175,183,.07),transparent 65%),linear-gradient(130deg,#252627,#191c1d)!important}
 body.ej-brand-theme #brand-intro .intro-halo-rose{background:radial-gradient(rgba(245,175,183,.26) 0%,rgba(245,175,183,.1) 30%,transparent 68%)!important}
 body.ej-brand-theme #brand-intro .intro-halo-pearl{background:radial-gradient(rgba(244,242,239,.24) 0%,rgba(244,242,239,.07) 30%,transparent 65%)!important}
 body.ej-brand-theme #brand-intro .intro-halo-copper{background:radial-gradient(rgba(245,175,183,.15) 0%,rgba(245,175,183,.06) 35%,transparent 68%)!important}
+/* Restore the illuminated lettering while keeping the original rose palette. */
+body.ej-brand-theme #brand-intro .intro-name{background-image:linear-gradient(110deg,#f5afb7 0%,#f5afb7 36%,#ffe3e6 49%,#f5afb7 62%,#f5afb7 100%)!important;background-size:240% 100%!important;background-position:100% 50%;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;animation:intro-name-in 1.5s cubic-bezier(.2,.7,.2,1) both,ej-name-light 8s ease-in-out 1.5s infinite!important}
+@keyframes ej-name-light{0%,18%{background-position:100% 50%}70%,100%{background-position:0% 50%}}
+@media(prefers-reduced-motion:reduce){body.ej-brand-theme #brand-intro .intro-name{animation:none!important;background-position:50% 50%!important}}
