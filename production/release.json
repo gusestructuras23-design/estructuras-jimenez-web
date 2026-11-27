@@ -1,8 +1,8 @@
 {
-  "public_version": "4cac94a7-ba86-4343-b41d-4bd699b5fd4f",
+  "public_version": "0773fc5b-e455-4225-89e5-cf2dfe316a20",
   "changes": [
-    "Rosa exacto #F5AFB7 en el nombre principal sin degradado malva",
-    "Halos rosa y blanco cálido con fondos grafito neutros; geometría y animaciones Akari preservadas"
+    "Entrada de letras original y recorrido de luz rosa suave sobre JIMÉNEZ",
+    "Rosa #F5AFB7 y brillo claro #FFE3E6; movimiento reducido respetado"
   ],
-  "verification": "22 uploaded modules verified byte for byte. Live Chromium 1366/390: intro computed color rgb(245,175,183), no text gradient, no horizontal overflow; footer navigation, game and Formspree endpoint present. Local complete game tested."
+  "verification": "22 uploaded modules verified byte for byte. Live Chromium confirms intro-name-in and ej-name-light animations, changing background position, original rose gradient and no animation under reduced motion."
 }
