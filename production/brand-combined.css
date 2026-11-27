@@ -1118,3 +1118,23 @@ body.ej-brand-theme .ej-clean-footer .ej-footer-credit strong{font-size:12px;fon
  body.ej-brand-theme .ej-clean-footer .ej-footer-inner{gap:24px}
 }
 @media(max-width:360px){body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:22px}body.ej-brand-theme .ej-clean-footer .ej-footer-contact{gap:0 10px}body.ej-brand-theme .ej-clean-footer .ej-footer-inline{font-size:11px}}
+
+/* Editorial footer: clear destinations alongside brand and real contact details. */
+body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:minmax(0,1fr) minmax(140px,.55fr) minmax(300px,1.1fr);align-items:start;gap:28px 48px}
+body.ej-brand-theme .ej-clean-footer .ej-footer-heading{display:block;margin:0 0 8px;color:#c6c7c4;font-size:10px;line-height:1.5;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+body.ej-brand-theme .ej-clean-footer .ej-footer-explore{display:flex;flex-direction:column;align-items:flex-start}
+body.ej-brand-theme .ej-clean-footer .ej-footer-explore>a{display:inline-flex;align-items:center;min-height:44px;color:#f4f2ef;font-size:13px;line-height:1.5;text-decoration:none;transition:color .2s}
+body.ej-brand-theme .ej-clean-footer .ej-footer-explore>a:hover{color:#f5afb7}
+body.ej-brand-theme .ej-clean-footer .ej-footer-details{border-left:0;padding-left:0;gap:0}
+body.ej-brand-theme .ej-clean-footer .ej-footer-contact{gap:0 18px;justify-content:flex-start}
+body.ej-brand-theme .ej-clean-footer .ej-footer-address{margin-top:8px}
+@media(min-width:681px) and (max-width:980px){body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:minmax(0,1fr) 120px minmax(240px,1fr);gap:24px}body.ej-brand-theme .ej-clean-footer .ej-footer-brand>a{gap:10px}body.ej-brand-theme .ej-clean-footer .ej-footer-brand>a strong{font-size:29px}body.ej-brand-theme .ej-clean-footer .ej-footer-brand>a img{width:48px;height:40px}body.ej-brand-theme .ej-clean-footer .ej-footer-since{margin-left:58px}body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:24px}}
+@media(max-width:680px){
+ body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:100px minmax(0,1fr);gap:24px}
+ body.ej-brand-theme .ej-clean-footer .ej-footer-brand{grid-column:1/-1}
+ body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:23px}
+ body.ej-brand-theme .ej-clean-footer .ej-footer-contact{flex-direction:column;align-items:flex-start}
+ body.ej-brand-theme .ej-clean-footer .ej-footer-address{font-size:12px;overflow-wrap:anywhere}
+ body.ej-brand-theme .ej-clean-footer .ej-footer-contact .ej-footer-inline{font-size:12px}
+}
+@media(max-width:360px){body.ej-brand-theme .ej-clean-footer .ej-footer-top{grid-template-columns:90px minmax(0,1fr);gap:20px}body.ej-brand-theme .ej-clean-footer .ej-footer-phone{font-size:21px}}

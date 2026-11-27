@@ -1,10 +1,9 @@
 {
-  "public_version": "b679eb5d-e3bc-4b38-99bf-867247efdb6c",
+  "public_version": "f5bf3467-a6ec-4285-a348-fe5e3ae6e0ff",
   "changes": [
     "Pie en dos bloques alineados: marca a la izquierda y contacto a la derecha; distribución apilada en móvil",
     "Botón Desarrollado por IPService con enlace https://wa.me/5215644361349",
-    "Accesos flotantes de WhatsApp y puerquito conservados",
-    "Inicio Akari original y siete recursos recuperados e incluidos en módulo independiente"
+    "Accesos flotantes de WhatsApp y puerquito conservados"
   ],
-  "verification": "LIVE Chromium: original Akari visible, complete game builds three pieces and welcomes pigs; 390px no overflow. 22 published modules verified byte for byte."
+  "verification": "Miniflare render and Chromium at 1366, 768, 390 and 320px: correct phone, map, developer WhatsApp and founding date; two aligned desktop blocks and stacked left-aligned mobile blocks, no horizontal overflow or overlap with floating controls; developer button target at least 44px. All 21 uploaded modules verified byte for byte; binding preserved."
 }
