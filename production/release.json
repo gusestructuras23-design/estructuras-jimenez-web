@@ -1,8 +1,8 @@
 {
-  "public_version": "dacf67d3-6ef6-4cc0-a75a-20ff97a2a742",
+  "public_version": "4cac94a7-ba86-4343-b41d-4bd699b5fd4f",
   "changes": [
-    "Pie editorial de tres bloques: marca, navegación y contacto",
-    "Enlaces a Proyectos, Quiénes somos y Contacto; privacidad e IPService conservados"
+    "Rosa exacto #F5AFB7 en el nombre principal sin degradado malva",
+    "Halos rosa y blanco cálido con fondos grafito neutros; geometría y animaciones Akari preservadas"
   ],
-  "verification": "22 modules verified byte for byte. Local Chromium 1366/768/390/320: destinations and 44px links; live Chromium 1366/390/320: anchor clicks, no overflow, original Akari and game present."
+  "verification": "22 uploaded modules verified byte for byte. Live Chromium 1366/390: intro computed color rgb(245,175,183), no text gradient, no horizontal overflow; footer navigation, game and Formspree endpoint present. Local complete game tested."
 }
